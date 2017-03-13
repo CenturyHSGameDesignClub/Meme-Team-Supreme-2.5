@@ -1,0 +1,47 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+/[Ll]ibrary/
+sysinfo.txt
+*.stackdump
+
+# =============== #
+# Custom Files    #
+# =============== # 
+UnityLockfile
+main.exe
+
+# =============== #
+# Sample Files    #
+# =============== # 
+# Note: Winikka deleted the folders to ignore
+
+
+# ============================================= #
+# Visual Studio / MonoDevelop / Rider generated #cd
+# ============================================= #
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+/.idea*/
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
