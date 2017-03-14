@@ -43,6 +43,7 @@ public class FixInteraction : MonoBehaviour
 				}
 			} else if (InTrigger) {
 				repairSign.gameObject.SetActive (true);
+				repairValue.gameObject.SetActive (false);
 			} else {
 				repairValue.gameObject.SetActive (false);
 				repairSign.gameObject.SetActive (false);

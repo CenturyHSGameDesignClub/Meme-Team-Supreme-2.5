@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour
 {
-	[HideInInspector]
+	[SerializeField]
     public Transform target;			//scripts should be able to do this for you
 	[SerializeField]
     private float smoothing = 5f;
@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
 
 	void Start ()
     {
-		SetTarget ();
+		///SetTarget ();
 		//setting the offset
         offset = transform.position - target.position;
     }
@@ -22,6 +22,7 @@ public class CameraFollow : MonoBehaviour
     {
 		//new position based on the target's postion and offset
         targetCamPos = target.position + offset;
+		Debug.Log (targetCamPos);
 		//smoothly adjusts the postion to the new one
         transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing);
     }
@@ -29,6 +30,7 @@ public class CameraFollow : MonoBehaviour
 	public void SetTarget()
 	{
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
+		Debug.Log (target.gameObject.name);
 
 		if (target == null) {
 			Debug.LogError ("Error: there is no player in the scene");

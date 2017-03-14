@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 	private float jumpPower = 100;				//force applied to rigidbody
 
     private Rigidbody rb;
+	private Animator anim;
 	private float xInput = 0;
 	private float yInput = 0;
 	private bool jumpPressed = false;
@@ -42,23 +43,31 @@ public class PlayerMovement : MonoBehaviour
 			rb.useGravity = !value;
 		}
 	}
-	public bool Action { get { return Input.GetButton (actionButton); } }
-	public bool Repair { get { return Input.GetButton (repairButton); } }
+	public bool Action { get; set; }
+	public bool Repair { get; set; }
 
 	void Start ()
     {
         rb = GetComponent<Rigidbody>();
+		anim = GetComponent<Animator> ();
 		AllowClimb = false;
 	}
 
 	void Update ()
     {
+		GetInput ();
+		Flip ();
+		JumpLogic ();
+		Animation ();
+	}
+
+	void GetInput()
+	{
 		xInput = Input.GetAxis (xInputAxis);
 		yInput = Input.GetAxis (yInputAxis);
 		jumpPressed = Input.GetButtonDown (jumpButton);
-
-		Flip ();
-		JumpLogic ();
+		Action = Input.GetButtonDown (actionButton);
+		Repair = Input.GetButton (repairButton);
 
 		if (Mathf.Abs (xInput) > inputDeadzone) {
 			xInput *= speed;
@@ -67,6 +76,11 @@ public class PlayerMovement : MonoBehaviour
 		if (Mathf.Abs (yInput) > inputDeadzone) {
 			yInput *= speed;
 		}
+	}
+
+	void Animation()
+	{
+		anim.SetBool ("IsRunning", Mathf.Abs (xInput) > inputDeadzone);
 	}
 
     void FixedUpdate ()
