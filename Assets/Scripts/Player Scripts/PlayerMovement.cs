@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 	[Header("Jump Settings:")]
 	[SerializeField]
 	private float jumpPower = 100;				//force applied to rigidbody
+	[SerializeField]
+	private LayerMask groundLayer;
 
     private Rigidbody rb;
 	private Animator anim;
@@ -80,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Animation()
 	{
-		anim.SetBool ("IsRunning", Mathf.Abs (xInput) > inputDeadzone);
+		anim.SetBool ("IsRunning", Mathf.Abs (xInput) > inputDeadzone && !Repair);
 	}
 
     void FixedUpdate ()
@@ -99,19 +101,27 @@ public class PlayerMovement : MonoBehaviour
 	//grounded once player lands
 	void OnCollisionEnter(Collision col)
 	{
+		//Debug.Log ("OnCollisionEnter");
+		isGrounded = true;
+	}
+
+	void OnCollisionStay(Collision col)
+	{
+		//Debug.Log ("OnCollisionStay");
 		isGrounded = true;
 	}
 
 	//not grounded when not on another collider
 	void OnCollisionExit(Collision col)
 	{
+		//Debug.Log ("OnCollisionExit");
 		isGrounded = false;
-	}
+	}		
 
 	//applies a force to the rigidbody reference when gameobject is grounded and pressed jump key
 	void JumpLogic() 
 	{
-		if (isGrounded && jumpPressed) {
+		if (isGrounded && jumpPressed && !Repair) {
 			rb.AddForce (new Vector3 (0, jumpPower, 0));
 		}
 	}

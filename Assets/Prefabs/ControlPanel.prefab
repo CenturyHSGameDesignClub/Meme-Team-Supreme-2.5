@@ -61,6 +61,7 @@ GameObject:
   - 65: {fileID: 6591560}
   - 114: {fileID: 11405914}
   - 114: {fileID: 11492066}
+  - 82: {fileID: 8251910}
   m_Layer: 0
   m_Name: ControlPanel
   m_TagString: Untagged
@@ -267,8 +268,82 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.46196592, y: 0.6075258, z: 0.2859841}
-  m_Center: {x: 0.2875, y: 0.09751202, z: 0.0014624819}
+  m_Size: {x: 0.46196592, y: 0.8372941, z: 0.37411487}
+  m_Center: {x: 0.28749996, y: 0.21239603, z: 0.0052714646}
+--- !u!82 &8251910
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121114}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11405502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -307,6 +382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b1fea87a8c2da4185425e2f66a9cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activateSound: {fileID: 0}
+  deactivateSound: {fileID: 0}
   activeOnStart: 1
   door: {fileID: 0}
 --- !u!114 &11462266
@@ -461,7 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repairSign: {fileID: 11489614}
   repairValue: {fileID: 11475518}
-  repairTime: 3
+  repairTime: 1.5
 --- !u!222 &22215658
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -611,7 +688,23 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: repairTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 121114}

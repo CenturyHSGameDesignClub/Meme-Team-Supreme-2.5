@@ -22,7 +22,6 @@ public class CameraFollow : MonoBehaviour
     {
 		//new position based on the target's postion and offset
         targetCamPos = target.position + offset;
-		Debug.Log (targetCamPos);
 		//smoothly adjusts the postion to the new one
         transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing);
     }

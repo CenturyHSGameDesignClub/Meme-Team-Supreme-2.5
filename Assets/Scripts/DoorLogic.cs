@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DoorLogic : Interaction 
+public class DoorLogic : DoorInteraction 
 {
 	public Transform door;
 
-	void Update () 
+	public override void Update () 
 	{
+		//uses the parent's update
+		base.Update ();
+		//controls the door
 		OpenDoor ();
 	}
 
 	void OpenDoor()
 	{
-		door.gameObject.SetActive (Active);	
+		door.gameObject.SetActive (Active);
 	}
 }
