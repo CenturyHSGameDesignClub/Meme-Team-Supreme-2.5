@@ -8,9 +8,9 @@ public class Boundry
     public float zMin, zMax;
 }*/
 
-public class PlayerMovement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
-	[Header("Input Settings:")]
+    /*[Header("Input Settings:")]
 	[SerializeField]
 	private float inputDeadzone = 0.2f;
 	[Space]
@@ -24,7 +24,19 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField]
 	private float distanceToGround = 0.6f;
 	[SerializeField]
-	private LayerMask groundLayer;
+	private LayerMask groundLayer;*/
+
+
+    //PLEASE do not do the thing with headers it makes it really  
+    //hard to read and undestand what variables we have in the code.
+    //Plus, you are not supposed to be able to edit private variables
+    //in the scene(hence the "Private").
+    private float inputDeadzone = 0.2f;
+    private float speed = 2;
+    private float jumpPower = 100;
+    private float distanceToGround = 0.6f;
+
+    private LayerMask groundLayer;
 
     //public Boundry boundry;
 

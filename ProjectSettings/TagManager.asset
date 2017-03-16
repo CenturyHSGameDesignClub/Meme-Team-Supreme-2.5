@@ -4,7 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fire
+  - OxygenCanister1
+  - ScrapMetal1
+  - WeldingTorch
+  - HullHole1
+  - OxygenCanister3
+  - OxygenCanister2
+  - Border
+  - ScrapMetal
+  - PowerGenerator
+  - Battery1
+  - PasscodeBook
+  - Wrench
+  - Battery2
+  - Battery3
   layers:
   - Default
   - TransparentFX

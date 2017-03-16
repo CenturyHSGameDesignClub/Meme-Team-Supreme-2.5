@@ -34,5 +34,9 @@ public class OxygenController : MonoBehaviour
             GameOverText.text = "Game Over";
             deathMessage.text = "You ran out of oxygen.";
         }
+        if (Input.GetButtonDown("OxygenCheat"))
+        {
+            OxygenTimer = OxygenTimer + 60;
+        }
 	}
 }
