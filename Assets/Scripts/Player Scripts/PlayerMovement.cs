@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Animation()
 	{
-		anim.SetBool ("IsRunning", Mathf.Abs (xInput) > inputDeadzone && !Repair);
+		//anim.SetBool ("IsRunning", Mathf.Abs (xInput) > inputDeadzone && !Repair);
 	}
 
     void FixedUpdate ()
