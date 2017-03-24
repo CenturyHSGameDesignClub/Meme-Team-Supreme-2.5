@@ -31,10 +31,12 @@ public class OxygenController : MonoBehaviour
         {
             OxygenCountText.text = "Oxygen Remaining: 0";
             playerMovement.enabled = false;
-			playerMovement.gameObject.GetComponent<Animator> ().enabled = false;
             GameOverText.text = "Game Over";
             deathMessage.text = "You ran out of oxygen.";
-			Time.timeScale = 0f;
+        }
+        if (Input.GetButtonDown("OxygenCheat"))
+        {
+            OxygenTimer = OxygenTimer + 60;
         }
 	}
 }

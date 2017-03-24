@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Main/Title.unity
   - enabled: 1
     path: Assets/Scenes/Test/Test_Arena.unity
+  - enabled: 1
+    path: Assets/Scenes/MechanicsScene.unity

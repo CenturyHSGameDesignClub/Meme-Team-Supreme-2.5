@@ -2,8 +2,6 @@
 using System.Collections;
 using UnityEngine.UI;
 
-//WARNING! Outdated, and most likely replaced
-
 public class FixInteraction : MonoBehaviour 
 {
 	[SerializeField]
