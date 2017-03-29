@@ -1900,7 +1900,7 @@ Transform:
   m_PrefabParentObject: {fileID: 458748, guid: 19732b32c700f1942ac77338462bdb48, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 918275537}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3478,6 +3478,7 @@ GameObject:
   - 136: {fileID: 1937099866}
   - 114: {fileID: 1937099865}
   - 114: {fileID: 1999622307}
+  - 82: {fileID: 1937099868}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3538,6 +3539,80 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!82 &1937099868
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1937099864}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1938385405
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,6 +3735,9 @@ MonoBehaviour:
   PasscodeBookImage: {fileID: 647056893}
   PowerGeneratorImage: {fileID: 129519522}
   PowerGeneratorBrokenImage: {fileID: 825598812}
+  Clip:
+  - {fileID: 8300000, guid: ff2a63c41dd769c46be36465e4d40aa2, type: 3}
+  - {fileID: 8300000, guid: 84ac1924df9593346a65ff57ea73a907, type: 3}
   GameOverText: {fileID: 1858354521}
   DeathMessageText: {fileID: 1836940915}
 --- !u!1 &2061003315

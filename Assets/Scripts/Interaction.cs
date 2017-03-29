@@ -20,6 +20,8 @@ public class Interaction : MonoBehaviour
     public GameObject PowerGeneratorImage;
     public GameObject PowerGeneratorBrokenImage;
 
+    public AudioClip[] Clip;
+
     public Text GameOverText;
     public Text DeathMessageText;
 
@@ -129,6 +131,8 @@ public class Interaction : MonoBehaviour
                 oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
                 OxygenCanisterFullImage1Renderer.enabled = false; 
                 OxygenCanister1Full = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -139,6 +143,8 @@ public class Interaction : MonoBehaviour
                 oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
                 OxygenCanisterFullImage2Renderer.enabled = false;
                 OxygenCanister2Full = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -149,6 +155,8 @@ public class Interaction : MonoBehaviour
                 oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
                 OxygenCanisterFullImage3Renderer.enabled = false;
                 OxygenCanister3Full = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -159,6 +167,8 @@ public class Interaction : MonoBehaviour
                 ScrapCount++;
                 ScrapMetal1ImageRenderer.enabled = false;
                 ScrapMetal1Collected = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -170,6 +180,8 @@ public class Interaction : MonoBehaviour
                 ScrapCount--;
                 Hull1RepairedImageRenderer.enabled = true;
                 Hull1Repaired = true;
+                GetComponent<AudioSource>().clip = Clip[1];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -179,6 +191,8 @@ public class Interaction : MonoBehaviour
             {
                 HasTorch = true;
                 TorchImageRenderer.enabled = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -190,6 +204,8 @@ public class Interaction : MonoBehaviour
                 BatteryCount++;
                 Battery1ImageRenderer.enabled = false;
                 Battery1Collected = true;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -201,6 +217,8 @@ public class Interaction : MonoBehaviour
                 BatteryCount++;
                 Battery2ImageRenderer.enabled = false;
                 Battery2Collected = true;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -212,6 +230,8 @@ public class Interaction : MonoBehaviour
                 BatteryCount++;
                 Battery3ImageRenderer.enabled = false;
                 Battery3Collected = true;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -222,6 +242,8 @@ public class Interaction : MonoBehaviour
             {
                 HasWrench = true;
                 WrenchImageRenderer.enabled = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -232,6 +254,8 @@ public class Interaction : MonoBehaviour
             {
                 PasscodeBookCollected = true;
                 PasscodeBookImageRenderer.enabled = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -244,6 +268,8 @@ public class Interaction : MonoBehaviour
                 BatteryCount =- 3;
                 PowerGeneratorImageRenderer.enabled = true;
                 PowerGeneratorBrokenImageRenderer.enabled = false;
+                GetComponent<AudioSource>().clip = Clip[2];
+                GetComponent<AudioSource>().Play();
             }
         }
     }
@@ -255,6 +281,8 @@ public class Interaction : MonoBehaviour
             GameOverText.text = "Game Over";
             DeathMessageText.text = "You fell into space, doomed to float through the void until you die.";
             oxygenController.enabled = false;
+            GetComponent<AudioSource>().clip = Clip[3];
+            GetComponent<AudioSource>().Play();
         }
     }
 }
