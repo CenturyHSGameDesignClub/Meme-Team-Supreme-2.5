@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class OxygenController : MonoBehaviour
 {
     public PlayerMovement playerMovement;
-    public float OxygenTimer = 150;
+    public float OxygenTimer = 100;
     public Text OxygenCountText;
     public Text GameOverText;
     public Text deathMessage;
@@ -38,5 +38,8 @@ public class OxygenController : MonoBehaviour
         {
             OxygenTimer = OxygenTimer + 60;
         }
+		if (OxygenTimer > 100) {
+			OxygenTimer = 100;
+		}
 	}
 }
