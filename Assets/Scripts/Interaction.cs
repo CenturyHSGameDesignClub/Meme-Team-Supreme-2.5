@@ -31,7 +31,7 @@ public class Interaction : MonoBehaviour
     private bool Battery1Collected;
     private bool Battery2Collected;
     private bool Battery3Collected;
-    private bool PasscodeBookCollected;
+    public bool PasscodeBookCollected;
     private bool PowerGenPartsCollected;
 
     private bool Hull1Repaired;
@@ -39,11 +39,11 @@ public class Interaction : MonoBehaviour
     private bool allHolesRepaired;
     private bool PowerGenRepaired;
 
-    private bool HasTorch;
-    private bool HasWrench;
+    public bool HasTorch;
+    public bool HasWrench;
 
-    private int ScrapCount;
-    private int BatteryCount;
+    public int ScrapCount;
+    public int BatteryCount;
 
     private Renderer OxygenCanisterFullImage1Renderer;
     private Renderer OxygenCanisterFullImage2Renderer;
@@ -241,7 +241,7 @@ public class Interaction : MonoBehaviour
                 && PowerGenRepaired == false)
             {
                 PowerGenRepaired = true;
-                BatteryCount =- 3;
+                BatteryCount -= 3;
                 PowerGeneratorImageRenderer.enabled = true;
                 PowerGeneratorBrokenImageRenderer.enabled = false;
             }
