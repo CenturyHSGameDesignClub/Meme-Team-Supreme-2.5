@@ -53,6 +53,7 @@ public class Interaction : MonoBehaviour
     private bool allHolesRepaired;
     private bool PowerGenRepaired;
 
+
 	public bool HasTorch;
     public bool HasWrench;
 
@@ -190,7 +191,7 @@ public class Interaction : MonoBehaviour
             {
                 ScrapCount++;
                 ScrapMetal1ImageRenderer.enabled = false;
-                ScrapMetal1Collected = false;
+                ScrapMetal1Collected = true;
             }
         }
 
@@ -200,7 +201,7 @@ public class Interaction : MonoBehaviour
 			{
 				ScrapCount++;
 				ScrapMetal2ImageRenderer.enabled = false;
-				ScrapMetal2Collected = false;
+				ScrapMetal2Collected = true;
 			}
 		}
 
@@ -210,7 +211,7 @@ public class Interaction : MonoBehaviour
 			{
 				ScrapCount++;
 				ScrapMetal3ImageRenderer.enabled = false;
-				ScrapMetal3Collected = false;
+				ScrapMetal3Collected = true;
 			}
 		}
 
@@ -220,7 +221,7 @@ public class Interaction : MonoBehaviour
 			{
 				ScrapCount++;
 				ScrapMetal4ImageRenderer.enabled = false;
-				ScrapMetal4Collected = false;
+				ScrapMetal4Collected = true;
 			}
 		}
 
@@ -336,7 +337,7 @@ public class Interaction : MonoBehaviour
                 && PowerGenRepaired == false)
             {
                 PowerGenRepaired = true;
-                BatteryCount =- 3;
+                BatteryCount -= 3;
                 PowerGeneratorImageRenderer.enabled = true;
                 PowerGeneratorBrokenImageRenderer.enabled = false;
             }
