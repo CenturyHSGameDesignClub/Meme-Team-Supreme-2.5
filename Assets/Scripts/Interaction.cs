@@ -10,7 +10,13 @@ public class Interaction : MonoBehaviour
     public GameObject OxygenCanisterFullImage2;
     public GameObject OxygenCanisterFullImage3;
     public GameObject Hull1RepairedImage;
+	public GameObject Hull2RepairedImage;
+	public GameObject Hull3RepairedImage;
+	public GameObject Hull4RepairedImage;
     public GameObject ScrapMetal1Image;
+	public GameObject ScrapMetal2Image;
+	public GameObject ScrapMetal3Image;
+	public GameObject ScrapMetal4Image;
     public GameObject Battery1Image;
     public GameObject Battery2Image;
     public GameObject Battery3Image;
@@ -27,32 +33,47 @@ public class Interaction : MonoBehaviour
     private bool OxygenCanister2Full;
     private bool OxygenCanister3Full;
 
-    private bool ScrapMetal1Collected;
-    private bool Battery1Collected;
-    private bool Battery2Collected;
-    private bool Battery3Collected;
-    private bool PasscodeBookCollected;
-    private bool PowerGenPartsCollected;
+	private bool ScrapMetal1Collected;
+	private bool ScrapMetal2Collected;
+	private bool ScrapMetal3Collected;
+	private bool ScrapMetal4Collected;
+
+	public bool Battery1Collected;
+	public bool Battery2Collected;
+	public bool Battery3Collected;
+	public bool PasscodeBookCollected;
+
+	private bool PowerGenPartsCollected;
 
     private bool Hull1Repaired;
+	private bool Hull2Repaired;
+	private bool Hull3Repaired;
+	private bool Hull4Repaired;
 
     private bool allHolesRepaired;
     private bool PowerGenRepaired;
 
-    private bool HasTorch;
-    private bool HasWrench;
 
-    private int ScrapCount;
-    private int BatteryCount;
+	public bool HasTorch;
+    public bool HasWrench;
+
+	public int ScrapCount;
+	public int BatteryCount;
 
     private Renderer OxygenCanisterFullImage1Renderer;
     private Renderer OxygenCanisterFullImage2Renderer;
     private Renderer OxygenCanisterFullImage3Renderer;
     private Renderer ScrapMetal1ImageRenderer;
+	private Renderer ScrapMetal2ImageRenderer;
+	private Renderer ScrapMetal3ImageRenderer;
+	private Renderer ScrapMetal4ImageRenderer;
     private Renderer Battery1ImageRenderer;
     private Renderer Battery2ImageRenderer;
     private Renderer Battery3ImageRenderer;
     private Renderer Hull1RepairedImageRenderer;
+	private Renderer Hull2RepairedImageRenderer;
+	private Renderer Hull3RepairedImageRenderer;
+	private Renderer Hull4RepairedImageRenderer;
     private Renderer TorchImageRenderer;
     private Renderer WrenchImageRenderer;
     private Renderer PasscodeBookImageRenderer;
@@ -69,6 +90,9 @@ public class Interaction : MonoBehaviour
         OxygenCanister3Full = true;
 
         ScrapMetal1Collected = false;
+		ScrapMetal2Collected = false;
+		ScrapMetal3Collected = false;
+		ScrapMetal4Collected = false;
         Battery1Collected = false;
         Battery2Collected = false;
         Battery3Collected = false;
@@ -76,6 +100,9 @@ public class Interaction : MonoBehaviour
         PowerGenPartsCollected = false;
 
         Hull1Repaired = false;
+		Hull2Repaired = false;
+		Hull3Repaired = false;
+		Hull4Repaired = false;
         
         allHolesRepaired = false;
         PowerGenRepaired = false;
@@ -90,10 +117,16 @@ public class Interaction : MonoBehaviour
         OxygenCanisterFullImage2Renderer = OxygenCanisterFullImage2.GetComponent<Renderer>();
         OxygenCanisterFullImage3Renderer = OxygenCanisterFullImage3.GetComponent<Renderer>();
         ScrapMetal1ImageRenderer = ScrapMetal1Image.GetComponent<Renderer>();
+		ScrapMetal2ImageRenderer = ScrapMetal2Image.GetComponent<Renderer>();
+		ScrapMetal3ImageRenderer = ScrapMetal3Image.GetComponent<Renderer>();
+		ScrapMetal4ImageRenderer = ScrapMetal4Image.GetComponent<Renderer>();
         Battery1ImageRenderer = Battery1Image.GetComponent<Renderer>();
         Battery2ImageRenderer = Battery2Image.GetComponent<Renderer>();
         Battery3ImageRenderer = Battery3Image.GetComponent<Renderer>();
         Hull1RepairedImageRenderer = Hull1RepairedImage.GetComponent<Renderer>();
+		Hull2RepairedImageRenderer = Hull2RepairedImage.GetComponent<Renderer>();
+		Hull3RepairedImageRenderer = Hull3RepairedImage.GetComponent<Renderer>();
+		Hull4RepairedImageRenderer = Hull4RepairedImage.GetComponent<Renderer>();
         TorchImageRenderer = TorchImage.GetComponent<Renderer>();
         WrenchImageRenderer = WrenchImage.GetComponent<Renderer>();
         PasscodeBookImageRenderer = PasscodeBookImage.GetComponent<Renderer>();
@@ -107,7 +140,7 @@ public class Interaction : MonoBehaviour
     {
         keyPressed = Input.GetButtonDown("Interact");
 
-        if (Hull1Repaired == true)
+		if (Hull1Repaired == true && Hull2Repaired && Hull3Repaired && Hull4Repaired)
         {
             allHolesRepaired = true;
         }
@@ -158,9 +191,39 @@ public class Interaction : MonoBehaviour
             {
                 ScrapCount++;
                 ScrapMetal1ImageRenderer.enabled = false;
-                ScrapMetal1Collected = false;
+                ScrapMetal1Collected = true;
             }
         }
+
+		else if (other.CompareTag("ScrapMetal2"))
+		{
+			if (keyPressed == true && ScrapMetal2Collected == false)
+			{
+				ScrapCount++;
+				ScrapMetal2ImageRenderer.enabled = false;
+				ScrapMetal2Collected = true;
+			}
+		}
+
+		else if (other.CompareTag("ScrapMetal3"))
+		{
+			if (keyPressed == true && ScrapMetal3Collected == false)
+			{
+				ScrapCount++;
+				ScrapMetal3ImageRenderer.enabled = false;
+				ScrapMetal3Collected = true;
+			}
+		}
+
+		else if (other.CompareTag("ScrapMetal4"))
+		{
+			if (keyPressed == true && ScrapMetal4Collected == false)
+			{
+				ScrapCount++;
+				ScrapMetal4ImageRenderer.enabled = false;
+				ScrapMetal4Collected = true;
+			}
+		}
 
         else if (other.CompareTag("HullHole1"))
         {
@@ -172,6 +235,39 @@ public class Interaction : MonoBehaviour
                 Hull1Repaired = true;
             }
         }
+
+		else if (other.CompareTag("HullHole2"))
+		{
+			if (keyPressed == true && ScrapCount >= 1 && 
+				HasTorch == true && Hull2Repaired == false)
+			{
+				ScrapCount--;
+				Hull2RepairedImageRenderer.enabled = true;
+				Hull2Repaired = true;
+			}
+		}
+
+		else if (other.CompareTag("HullHole3"))
+		{
+			if (keyPressed == true && ScrapCount >= 1 && 
+				HasTorch == true && Hull3Repaired == false)
+			{
+				ScrapCount--;
+				Hull3RepairedImageRenderer.enabled = true;
+				Hull3Repaired = true;
+			}
+		}
+
+		else if (other.CompareTag("HullHole4"))
+		{
+			if (keyPressed == true && ScrapCount >= 1 && 
+				HasTorch == true && Hull4Repaired == false)
+			{
+				ScrapCount--;
+				Hull4RepairedImageRenderer.enabled = true;
+				Hull4Repaired = true;
+			}
+		}
 
         else if (other.CompareTag("WeldingTorch"))
         {
@@ -241,7 +337,7 @@ public class Interaction : MonoBehaviour
                 && PowerGenRepaired == false)
             {
                 PowerGenRepaired = true;
-                BatteryCount =- 3;
+                BatteryCount -= 3;
                 PowerGeneratorImageRenderer.enabled = true;
                 PowerGeneratorBrokenImageRenderer.enabled = false;
             }

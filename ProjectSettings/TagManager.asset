@@ -3,7 +3,28 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ScrapMetal1
+  - ScrapMetal2
+  - ScrapMetal3
+  - ScrapMetal4
+  - WeldingTorch
+  - HullHole1
+  - HullHole2
+  - HullHole3
+  - HullHole4
+  - Battery1
+  - Battery2
+  - Battery3
+  - PasscodeBook
+  - Wrench
+  - PowerGenerator
+  - OxygenCanister1
+  - OxygenCanister2
+  - OxygenCanister3
+  - OxygenCanister4
+  - OxygenCanister5
+  - Border
   layers:
   - Default
   - TransparentFX
