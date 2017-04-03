@@ -26,6 +26,8 @@ public class Interaction : MonoBehaviour
     public GameObject PowerGeneratorImage;
     public GameObject PowerGeneratorBrokenImage;
 
+    public AudioClip[] Clip;
+
     public Text GameOverText;
     public Text DeathMessageText;
 
@@ -103,7 +105,7 @@ public class Interaction : MonoBehaviour
 		Hull2Repaired = false;
 		Hull3Repaired = false;
 		Hull4Repaired = false;
-        
+
         allHolesRepaired = false;
         PowerGenRepaired = false;
 
@@ -134,7 +136,7 @@ public class Interaction : MonoBehaviour
         PowerGeneratorImageRenderer = PowerGeneratorImage.GetComponent<Renderer>();
 
     }
-	
+
 	// Update is called once per frame
 	void Update()
     {
@@ -144,8 +146,8 @@ public class Interaction : MonoBehaviour
         {
             allHolesRepaired = true;
         }
-        
-        if (BatteryCount == 3 && HasWrench == true 
+
+        if (BatteryCount == 3 && HasWrench == true
             && PasscodeBookCollected == true)
         {
             PowerGenPartsCollected = true;
@@ -160,8 +162,10 @@ public class Interaction : MonoBehaviour
             if (keyPressed == true && OxygenCanister1Full == true)
             {
                 oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
-                OxygenCanisterFullImage1Renderer.enabled = false; 
+                OxygenCanisterFullImage1Renderer.enabled = false;
                 OxygenCanister1Full = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -172,6 +176,8 @@ public class Interaction : MonoBehaviour
                 oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
                 OxygenCanisterFullImage2Renderer.enabled = false;
                 OxygenCanister2Full = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -182,6 +188,8 @@ public class Interaction : MonoBehaviour
                 oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
                 OxygenCanisterFullImage3Renderer.enabled = false;
                 OxygenCanister3Full = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -192,6 +200,8 @@ public class Interaction : MonoBehaviour
                 ScrapCount++;
                 ScrapMetal1ImageRenderer.enabled = false;
                 ScrapMetal1Collected = true;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -227,18 +237,20 @@ public class Interaction : MonoBehaviour
 
         else if (other.CompareTag("HullHole1"))
         {
-            if (keyPressed == true && ScrapCount >= 1 && 
+            if (keyPressed == true && ScrapCount >= 1 &&
                 HasTorch == true && Hull1Repaired == false)
             {
                 ScrapCount--;
                 Hull1RepairedImageRenderer.enabled = true;
                 Hull1Repaired = true;
+                GetComponent<AudioSource>().clip = Clip[1];
+                GetComponent<AudioSource>().Play();
             }
         }
 
 		else if (other.CompareTag("HullHole2"))
 		{
-			if (keyPressed == true && ScrapCount >= 1 && 
+			if (keyPressed == true && ScrapCount >= 1 &&
 				HasTorch == true && Hull2Repaired == false)
 			{
 				ScrapCount--;
@@ -249,7 +261,7 @@ public class Interaction : MonoBehaviour
 
 		else if (other.CompareTag("HullHole3"))
 		{
-			if (keyPressed == true && ScrapCount >= 1 && 
+			if (keyPressed == true && ScrapCount >= 1 &&
 				HasTorch == true && Hull3Repaired == false)
 			{
 				ScrapCount--;
@@ -260,7 +272,7 @@ public class Interaction : MonoBehaviour
 
 		else if (other.CompareTag("HullHole4"))
 		{
-			if (keyPressed == true && ScrapCount >= 1 && 
+			if (keyPressed == true && ScrapCount >= 1 &&
 				HasTorch == true && Hull4Repaired == false)
 			{
 				ScrapCount--;
@@ -275,71 +287,85 @@ public class Interaction : MonoBehaviour
             {
                 HasTorch = true;
                 TorchImageRenderer.enabled = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
         else if (other.CompareTag("Battery1"))
         {
-            if (keyPressed == true && Battery1Collected == false 
+            if (keyPressed == true && Battery1Collected == false
                 && allHolesRepaired == true)
             {
                 BatteryCount++;
                 Battery1ImageRenderer.enabled = false;
                 Battery1Collected = true;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
         else if (other.CompareTag("Battery2"))
         {
-            if (keyPressed == true && Battery2Collected == false 
+            if (keyPressed == true && Battery2Collected == false
                 && allHolesRepaired == true)
             {
                 BatteryCount++;
                 Battery2ImageRenderer.enabled = false;
                 Battery2Collected = true;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
         else if (other.CompareTag("Battery3"))
         {
-            if (keyPressed == true && Battery3Collected == false 
+            if (keyPressed == true && Battery3Collected == false
                 && allHolesRepaired == true)
             {
                 BatteryCount++;
                 Battery3ImageRenderer.enabled = false;
                 Battery3Collected = true;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
         else if (other.CompareTag("Wrench"))
         {
-            if (keyPressed == true && HasWrench == false 
+            if (keyPressed == true && HasWrench == false
                 && allHolesRepaired == true)
             {
                 HasWrench = true;
                 WrenchImageRenderer.enabled = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
         else if (other.CompareTag("PasscodeBook"))
         {
-            if (keyPressed == true && PasscodeBookCollected == false 
+            if (keyPressed == true && PasscodeBookCollected == false
                 && allHolesRepaired == true)
             {
                 PasscodeBookCollected = true;
                 PasscodeBookImageRenderer.enabled = false;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
             }
         }
 
         else if (other.CompareTag("PowerGenerator"))
         {
-            if (keyPressed == true && PowerGenPartsCollected == true 
+            if (keyPressed == true && PowerGenPartsCollected == true
                 && PowerGenRepaired == false)
             {
                 PowerGenRepaired = true;
                 BatteryCount -= 3;
                 PowerGeneratorImageRenderer.enabled = true;
                 PowerGeneratorBrokenImageRenderer.enabled = false;
+                GetComponent<AudioSource>().clip = Clip[2];
+                GetComponent<AudioSource>().Play();
             }
         }
     }
@@ -351,6 +377,8 @@ public class Interaction : MonoBehaviour
             GameOverText.text = "Game Over";
             DeathMessageText.text = "You fell into space, doomed to float through the void until you die.";
             oxygenController.enabled = false;
+            GetComponent<AudioSource>().clip = Clip[3];
+            GetComponent<AudioSource>().Play();
         }
     }
 }
