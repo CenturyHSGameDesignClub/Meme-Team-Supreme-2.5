@@ -62,6 +62,10 @@ public class Interaction : MonoBehaviour
 	public int ScrapCount;
 	public int BatteryCount;
 
+	public bool HasPower {
+		get { return PowerGenRepaired; }
+	}
+
     private Renderer OxygenCanisterFullImage1Renderer;
     private Renderer OxygenCanisterFullImage2Renderer;
     private Renderer OxygenCanisterFullImage3Renderer;
