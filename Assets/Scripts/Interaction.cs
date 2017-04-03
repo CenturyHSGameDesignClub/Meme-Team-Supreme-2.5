@@ -52,7 +52,7 @@ public class Interaction : MonoBehaviour
 	private bool Hull3Repaired;
 	private bool Hull4Repaired;
 
-    private bool allHolesRepaired;
+    public bool allHolesRepaired;
     private bool PowerGenRepaired;
 
 

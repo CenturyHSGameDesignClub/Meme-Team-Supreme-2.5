@@ -1692,6 +1692,8 @@ MonoBehaviour:
   Interaction: {fileID: 1999622307}
   OxygenController: {fileID: 2107023773}
   Narration: {fileID: 1054525693}
+  Barrier1: {fileID: 1010816858}
+  Barrier2: {fileID: 795559200}
 --- !u!1 &568611790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,7 +1840,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 582183742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.294, y: 0.012, z: 4.464}
+  m_LocalPosition: {x: 0.294, y: 0.012, z: 6.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 690247496}
@@ -2458,7 +2460,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time:'
+  m_Text: 'Oxygen Remaining:'
 --- !u!222 &719315132
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2611,6 +2613,46 @@ Transform:
   - {fileID: 484915746}
   m_Father: {fileID: 517528947}
   m_RootOrder: 0
+--- !u!1 &795559200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 795559201}
+  - 65: {fileID: 795559202}
+  m_Layer: 0
+  m_Name: RightBorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &795559201
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 795559200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.228, z: 1.097}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2059399832}
+  m_RootOrder: 0
+--- !u!65 &795559202
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 795559200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.5, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &807918868
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,6 +3286,46 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.8, z: 0.8}
   m_Center: {x: 0.3, y: 0, z: 0}
+--- !u!1 &1010816858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1010816859}
+  - 65: {fileID: 1010816860}
+  m_Layer: 0
+  m_Name: LeftBorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1010816859
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010816858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.22799999, z: -1.384}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2059399832}
+  m_RootOrder: 1
+--- !u!65 &1010816860
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010816858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.5, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1022101724
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,6 +4476,8 @@ MonoBehaviour:
   Interaction: {fileID: 1999622307}
   OxygenController: {fileID: 2107023773}
   Narration: {fileID: 1054525693}
+  Barrier1: {fileID: 0}
+  Barrier2: {fileID: 0}
 --- !u!114 &1509367574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5985,6 +6069,7 @@ MonoBehaviour:
   Battery2Collected: 0
   Battery3Collected: 0
   PasscodeBookCollected: 0
+  allHolesRepaired: 0
   HasTorch: 0
   HasWrench: 0
   ScrapCount: 0
@@ -6113,7 +6198,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2029869683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.294, y: 0.006, z: 3.637}
+  m_LocalPosition: {x: 0.294, y: 0.006, z: 7.035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 587200959}
@@ -6134,6 +6219,35 @@ CapsuleCollider:
   m_Height: 0
   m_Direction: 0
   m_Center: {x: 0, y: 0.3, z: 0}
+--- !u!1 &2059399831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2059399832}
+  m_Layer: 0
+  m_Name: TutorialZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2059399832
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2059399831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 795559201}
+  - {fileID: 1010816859}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &2061003315
 GameObject:
   m_ObjectHideFlags: 0
