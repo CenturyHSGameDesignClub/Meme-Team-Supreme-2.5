@@ -36,6 +36,7 @@ public class EnemyMovement : MonoBehaviour
 	private float speed = 2;
 	private float jumpPower = 100;
 	private float distanceToGround = 0.6f;
+	public GameObject player;
 	public PlayerMovement playerMovement;
 	public Text GameOverText;
 	public Text deathMessage;
@@ -57,6 +58,7 @@ public class EnemyMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		//xInput = Math.Sign ((player.transform.position.z) - (this.transform.position.z));
 		xInput = -1;
 		jumpPressed = Input.GetButtonDown ("Jump");
 
