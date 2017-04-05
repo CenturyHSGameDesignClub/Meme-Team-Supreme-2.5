@@ -44,6 +44,7 @@ public class Narrator : MonoBehaviour
 		yield return new WaitForSeconds(5);
         Narration.text = "Have fun playing (Title), and do your best not to die, okay?";
         yield return new WaitForSeconds(10);
+		Narration.text = "";
 
 
     }
