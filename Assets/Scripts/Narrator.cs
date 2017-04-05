@@ -74,7 +74,7 @@ public class Narrator : MonoBehaviour
 			HullHoleMessageShown = true;
 			Narration.text = "First, we need to repair the holes in the hull.";
 			yield return new WaitForSeconds (5);
-			Narration.text = "We will need 1 piece of scrap mettal per hole, for 4 total, as well as a wwlding torch.";
+			Narration.text = "We will need 1 piece of scrap metal per hole, for 4 total, as well as a welding torch.";
 			yield return new WaitForSeconds (5);
 			Narration.text = "";
 		}
