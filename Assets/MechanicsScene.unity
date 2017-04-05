@@ -8196,6 +8196,7 @@ MonoBehaviour:
   jumpButton: Jump
   actionButton: Interact
   repairButton: Repair
+  restartButton: Restart
   speed: 2
   jumpPower: 100
   groundLayer:
