@@ -36,8 +36,8 @@ public class OxygenController : MonoBehaviour
         }
         if (Input.GetButtonDown("OxygenCheat"))
         {
-            //Disabling As this is a cheat for testing
-			//OxygenTimer = OxygenTimer + 60;
+            //It is not just for testing Matteas, We get points for cheats.
+			OxygenTimer = OxygenTimer + 50;
         }
 		if (OxygenTimer > 100) {
 			OxygenTimer = 100;
