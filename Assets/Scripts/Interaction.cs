@@ -237,6 +237,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount++;
 				ScrapMetal2ImageRenderer.enabled = false;
 				ScrapMetal2Collected = true;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
 			}
 		}
 
@@ -247,6 +249,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount++;
 				ScrapMetal3ImageRenderer.enabled = false;
 				ScrapMetal3Collected = true;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
 			}
 		}
 
@@ -257,6 +261,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount++;
 				ScrapMetal4ImageRenderer.enabled = false;
 				ScrapMetal4Collected = true;
+                GetComponent<AudioSource>().clip = Clip[0];
+                GetComponent<AudioSource>().Play();
 			}
 		}
 
@@ -281,8 +287,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount--;
 				Hull2RepairedImageRenderer.enabled = true;
 				Hull2Repaired = true;
-				GetComponent<AudioSource>().clip = Clip[1];
-				GetComponent<AudioSource>().Play();
+                GetComponent<AudioSource>().clip = Clip[1];
+                GetComponent<AudioSource>().Play();
 			}
 		}
 
@@ -307,8 +313,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount--;
 				Hull4RepairedImageRenderer.enabled = true;
 				Hull4Repaired = true;
-				GetComponent<AudioSource>().clip = Clip[1];
-				GetComponent<AudioSource>().Play();
+                GetComponent<AudioSource>().clip = Clip[1];
+                GetComponent<AudioSource>().Play();
 			}
 		}
 
