@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 /*
 [System.Serializable]
@@ -33,7 +34,7 @@ public class EnemyMovement : MonoBehaviour
 	//Plus, you are not supposed to be able to edit private variables
 	//in the scene(hence the "Private").
 	private float inputDeadzone = 0.2f;
-	private float speed = 2;
+	private float speed = 1.5f;
 	private float jumpPower = 100;
 	private float distanceToGround = 0.6f;
 	public GameObject player;
@@ -47,7 +48,9 @@ public class EnemyMovement : MonoBehaviour
 
 	private Rigidbody rb;
 	private float xInput = 0;
+	private float distanceToPlayer;
 	private bool jumpPressed = false;
+	public float followDistance = 1.5f;
 
 	// Use this for initialization
 	void Start ()
@@ -58,8 +61,13 @@ public class EnemyMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		//xInput = Math.Sign ((player.transform.position.z) - (this.transform.position.z));
-		xInput = -1;
+		distanceToPlayer = Math.Abs((player.transform.position.z) - (this.transform.position.z));
+		if (distanceToPlayer <= followDistance) {
+			xInput = Math.Sign ((player.transform.position.z) - (this.transform.position.z));
+		}
+		else{
+		xInput = 0;
+		}
 		jumpPressed = Input.GetButtonDown ("Jump");
 
 		Debug.Log (Grounded ());
@@ -109,6 +117,17 @@ public class EnemyMovement : MonoBehaviour
 			playerMovement.enabled = false;
 			GameOverText.text = "Game Over";
 			deathMessage.text = "You got killed by an alien.";
+		}
+	}
+
+	void Flip()
+	{
+		//flips right if x axis input is greater than 0
+		if (xInput > 0) {
+			transform.rotation = Quaternion.Euler (new Vector3 (0, 0, 0));
+			//flips left if x axis input is less than 0
+		} else if (xInput < 0) {
+			transform.rotation = Quaternion.Euler (new Vector3 (0, 180, 0));
 		}
 	}
 }
