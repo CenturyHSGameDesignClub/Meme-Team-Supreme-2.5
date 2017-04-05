@@ -36,7 +36,7 @@ public class Narrator : MonoBehaviour
         yield return new WaitForSeconds(5);
 		Narration.text = "Get oxygen canisters to give more oxygen, but it maxes at 100.";
 		yield return new WaitForSeconds(5);
-		Narration.text = "Running out of oxygen or falling off the ship will kill you.";
+		Narration.text = "Running out of oxygen, running into an enemy or falling off the ship will kill you.";
 		yield return new WaitForSeconds(5);
 		Narration.text = "Use the scrap metal and torch to repair the holes in the ship.";
 		yield return new WaitForSeconds(5);
