@@ -9,6 +9,8 @@ public class Interaction : MonoBehaviour
     public GameObject OxygenCanisterFullImage1;
     public GameObject OxygenCanisterFullImage2;
     public GameObject OxygenCanisterFullImage3;
+	public GameObject OxygenCanisterFullImage4;
+	public GameObject OxygenCanisterFullImage5;
     public GameObject Hull1RepairedImage;
 	public GameObject Hull2RepairedImage;
 	public GameObject Hull3RepairedImage;
@@ -29,6 +31,8 @@ public class Interaction : MonoBehaviour
 	public GameObject Door;
 	public GameObject Door2;
 	public GameObject Door3;
+	public GameObject Door4;
+	public GameObject Door5;
 
     public AudioClip[] Clip;
 
@@ -38,6 +42,8 @@ public class Interaction : MonoBehaviour
     private bool OxygenCanister1Full;
     private bool OxygenCanister2Full;
     private bool OxygenCanister3Full;
+	private bool OxygenCanister4Full;
+	private bool OxygenCanister5Full;
 
 	private bool ScrapMetal1Collected;
 	private bool ScrapMetal2Collected;
@@ -62,6 +68,8 @@ public class Interaction : MonoBehaviour
 	private bool Door1Opened;
 	private bool Door2Opened;
 	private bool Door3Opened;
+	private bool Door4Opened;
+	private bool Door5Opened;
 
 	public bool HasTorch;
     public bool HasWrench;
@@ -72,6 +80,8 @@ public class Interaction : MonoBehaviour
     private Renderer OxygenCanisterFullImage1Renderer;
     private Renderer OxygenCanisterFullImage2Renderer;
     private Renderer OxygenCanisterFullImage3Renderer;
+	private Renderer OxygenCanisterFullImage4Renderer;
+	private Renderer OxygenCanisterFullImage5Renderer;
     private Renderer ScrapMetal1ImageRenderer;
 	private Renderer ScrapMetal2ImageRenderer;
 	private Renderer ScrapMetal3ImageRenderer;
@@ -92,10 +102,14 @@ public class Interaction : MonoBehaviour
 	private Renderer DoorClosedImageRenderer;
 	private Renderer Door2ClosedImageRenderer;
 	private Renderer Door3ClosedImageRenderer;
+	private Renderer Door4ClosedImageRenderer;
+	private Renderer Door5ClosedImageRenderer;
 
 	private Collider DoorCollider;
 	private Collider Door2Collider;
 	private Collider Door3Collider;
+	private Collider Door4Collider;
+	private Collider Door5Collider;
 
     private bool keyPressed;
 
@@ -105,6 +119,8 @@ public class Interaction : MonoBehaviour
         OxygenCanister1Full = true;
         OxygenCanister2Full = true;
         OxygenCanister3Full = true;
+		OxygenCanister4Full = true;
+		OxygenCanister5Full = true;
 
         ScrapMetal1Collected = false;
 		ScrapMetal2Collected = false;
@@ -127,6 +143,8 @@ public class Interaction : MonoBehaviour
 		Door1Opened = false;
 		Door2Opened = false;
 		Door3Opened = false;
+		Door4Opened = false;
+		Door5Opened = false;
 
         HasTorch = false;
         HasWrench = false;
@@ -137,6 +155,8 @@ public class Interaction : MonoBehaviour
         OxygenCanisterFullImage1Renderer = OxygenCanisterFullImage1.GetComponent<Renderer>();
         OxygenCanisterFullImage2Renderer = OxygenCanisterFullImage2.GetComponent<Renderer>();
         OxygenCanisterFullImage3Renderer = OxygenCanisterFullImage3.GetComponent<Renderer>();
+		OxygenCanisterFullImage4Renderer = OxygenCanisterFullImage4.GetComponent<Renderer>();
+		OxygenCanisterFullImage5Renderer = OxygenCanisterFullImage5.GetComponent<Renderer>();
         ScrapMetal1ImageRenderer = ScrapMetal1Image.GetComponent<Renderer>();
 		ScrapMetal2ImageRenderer = ScrapMetal2Image.GetComponent<Renderer>();
 		ScrapMetal3ImageRenderer = ScrapMetal3Image.GetComponent<Renderer>();
@@ -156,10 +176,14 @@ public class Interaction : MonoBehaviour
 		DoorClosedImageRenderer = Door.GetComponent<Renderer> ();
 		Door2ClosedImageRenderer = Door2.GetComponent<Renderer> ();
 		Door3ClosedImageRenderer = Door3.GetComponent<Renderer> ();
+		Door4ClosedImageRenderer = Door4.GetComponent<Renderer> ();
+		Door5ClosedImageRenderer = Door5.GetComponent<Renderer> ();
 
 		DoorCollider = Door.GetComponent<Collider> ();
 		Door2Collider = Door2.GetComponent<Collider> ();
 		Door3Collider = Door3.GetComponent<Collider> ();
+		Door4Collider = Door4.GetComponent<Collider> ();
+		Door5Collider = Door5.GetComponent<Collider> ();
     }
 
 	// Update is called once per frame
@@ -217,6 +241,30 @@ public class Interaction : MonoBehaviour
                 GetComponent<AudioSource>().Play();
             }
         }
+
+		else if (other.CompareTag("OxygenCanister4"))
+		{
+			if (keyPressed == true && OxygenCanister4Full == true)
+			{
+				oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
+				OxygenCanisterFullImage4Renderer.enabled = false;
+				OxygenCanister4Full = false;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
+
+		else if (other.CompareTag("OxygenCanister5"))
+		{
+			if (keyPressed == true && OxygenCanister5Full == true)
+			{
+				oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
+				OxygenCanisterFullImage5Renderer.enabled = false;
+				OxygenCanister5Full = false;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
         else if (other.CompareTag("ScrapMetal1"))
         {
@@ -453,6 +501,40 @@ public class Interaction : MonoBehaviour
 				{
 					Door3ClosedImageRenderer.enabled = false;
 					Door3Collider.enabled = false;
+				}
+			}
+		}
+
+		else if (other.CompareTag("Door4"))
+		{
+			if (keyPressed == true && PowerGenRepaired == true)
+			{
+				Door4Opened = !Door4Opened;
+				if (Door4Opened == true) {
+					Door4ClosedImageRenderer.enabled = true;
+					Door4Collider.enabled = true;
+				} 
+				else 
+				{
+					Door4ClosedImageRenderer.enabled = false;
+					Door4Collider.enabled = false;
+				}
+			}
+		}
+
+		else if (other.CompareTag("Door5"))
+		{
+			if (keyPressed == true && PowerGenRepaired == true)
+			{
+				Door5Opened = !Door5Opened;
+				if (Door5Opened == true) {
+					Door5ClosedImageRenderer.enabled = true;
+					Door5Collider.enabled = true;
+				} 
+				else 
+				{
+					Door5ClosedImageRenderer.enabled = false;
+					Door5Collider.enabled = false;
 				}
 			}
 		}

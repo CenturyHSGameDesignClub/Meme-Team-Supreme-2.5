@@ -6,4 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MechanicsScene.unity
+    path: Assets/Scenes/MechanicsScene.unity
+  - enabled: 1
+    path: Assets/Scenes/Level_1.unity
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+  - enabled: 1
+    path: Assets/Scenes/BaseSceneTest.unity
+  - enabled: 1
+    path: Assets/Scenes/Test_Mechanics.unity
