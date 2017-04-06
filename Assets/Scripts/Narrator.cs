@@ -8,11 +8,11 @@ public class Narrator : MonoBehaviour
     public OxygenController OxygenController;
 
     public Text Narration;
-	public GameObject Barrier1;
-	public GameObject Barrier2;
+	//public GameObject Barrier1;
+	//public GameObject Barrier2;
 
-	private Collider Barrier1Collider;
-	private Collider Barrier2Collider;
+	//private Collider Barrier1Collider;
+	//private Collider Barrier2Collider;
 
 	private bool HullHoleMessageShown;
 	private bool PowerGenMessageShown;
@@ -21,8 +21,8 @@ public class Narrator : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-		Barrier1Collider = Barrier1.GetComponent<Collider> ();
-		Barrier2Collider = Barrier2.GetComponent<Collider> ();
+		//Barrier1Collider = Barrier1.GetComponent<Collider> ();
+		//Barrier2Collider = Barrier2.GetComponent<Collider> ();
 
 		PowerGenMessageShown = false;
 
@@ -60,9 +60,9 @@ public class Narrator : MonoBehaviour
         Narration.text = "Have fun playing (Title), and do your best not to die, okay?";
         yield return new WaitForSeconds(5);
 		Narration.text = "";
-		OxygenController.enabled = true;
-		Barrier1Collider.enabled = false;
-		Barrier2Collider.enabled = false;
+		//OxygenController.enabled = true;
+		//Barrier1Collider.enabled = false;
+		//Barrier2Collider.enabled = false;
     }
 
 	IEnumerator ComputerGuide()
