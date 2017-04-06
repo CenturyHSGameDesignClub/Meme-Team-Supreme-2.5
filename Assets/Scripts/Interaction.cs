@@ -25,6 +25,10 @@ public class Interaction : MonoBehaviour
     public GameObject PasscodeBookImage;
     public GameObject PowerGeneratorImage;
     public GameObject PowerGeneratorBrokenImage;
+	
+	public GameObject Door;
+	public GameObject Door2;
+	public GameObject Door3;
 
     public AudioClip[] Clip;
 
@@ -52,9 +56,12 @@ public class Interaction : MonoBehaviour
 	private bool Hull3Repaired;
 	private bool Hull4Repaired;
 
-    private bool allHolesRepaired;
+    public bool allHolesRepaired;
     private bool PowerGenRepaired;
 
+	private bool Door1Opened;
+	private bool Door2Opened;
+	private bool Door3Opened;
 
 	public bool HasTorch;
     public bool HasWrench;
@@ -81,6 +88,14 @@ public class Interaction : MonoBehaviour
     private Renderer PasscodeBookImageRenderer;
     private Renderer PowerGeneratorImageRenderer;
     private Renderer PowerGeneratorBrokenImageRenderer;
+
+	private Renderer DoorClosedImageRenderer;
+	private Renderer Door2ClosedImageRenderer;
+	private Renderer Door3ClosedImageRenderer;
+
+	private Collider DoorCollider;
+	private Collider Door2Collider;
+	private Collider Door3Collider;
 
     private bool keyPressed;
 
@@ -109,6 +124,10 @@ public class Interaction : MonoBehaviour
         allHolesRepaired = false;
         PowerGenRepaired = false;
 
+		Door1Opened = false;
+		Door2Opened = false;
+		Door3Opened = false;
+
         HasTorch = false;
         HasWrench = false;
 
@@ -134,7 +153,13 @@ public class Interaction : MonoBehaviour
         PasscodeBookImageRenderer = PasscodeBookImage.GetComponent<Renderer>();
         PowerGeneratorBrokenImageRenderer = PowerGeneratorBrokenImage.GetComponent<Renderer>();
         PowerGeneratorImageRenderer = PowerGeneratorImage.GetComponent<Renderer>();
+		DoorClosedImageRenderer = Door.GetComponent<Renderer> ();
+		Door2ClosedImageRenderer = Door2.GetComponent<Renderer> ();
+		Door3ClosedImageRenderer = Door3.GetComponent<Renderer> ();
 
+		DoorCollider = Door.GetComponent<Collider> ();
+		Door2Collider = Door2.GetComponent<Collider> ();
+		Door3Collider = Door3.GetComponent<Collider> ();
     }
 
 	// Update is called once per frame
@@ -161,7 +186,7 @@ public class Interaction : MonoBehaviour
         {
             if (keyPressed == true && OxygenCanister1Full == true)
             {
-                oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
+                oxygenController.OxygenTimer = oxygenController.OxygenTimer + 50;
                 OxygenCanisterFullImage1Renderer.enabled = false;
                 OxygenCanister1Full = false;
                 GetComponent<AudioSource>().clip = Clip[0];
@@ -275,8 +300,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount--;
 				Hull3RepairedImageRenderer.enabled = true;
 				Hull3Repaired = true;
-                GetComponent<AudioSource>().clip = Clip[1];
-                GetComponent<AudioSource>().Play();
+				GetComponent<AudioSource>().clip = Clip[1];
+				GetComponent<AudioSource>().Play();
 			}
 		}
 
@@ -380,6 +405,57 @@ public class Interaction : MonoBehaviour
                 GetComponent<AudioSource>().Play();
             }
         }
+
+		else if (other.CompareTag("Door1"))
+		{
+			if (keyPressed == true && PowerGenRepaired == true)
+			{
+				Door1Opened = !Door1Opened;
+				if (Door1Opened == true) {
+					DoorClosedImageRenderer.enabled = true;
+					DoorCollider.enabled = true;
+				} 
+				else 
+				{
+					DoorClosedImageRenderer.enabled = false;
+					DoorCollider.enabled = false;
+				}
+			}
+		}
+
+		else if (other.CompareTag("Door2"))
+		{
+			if (keyPressed == true && PowerGenRepaired == true)
+			{
+				Door2Opened = !Door2Opened;
+				if (Door2Opened == true) {
+					Door2ClosedImageRenderer.enabled = true;
+					Door2Collider.enabled = true;
+				} 
+				else 
+				{
+					Door2ClosedImageRenderer.enabled = false;
+					Door2Collider.enabled = false;
+				}
+			}
+		}
+
+		else if (other.CompareTag("Door3"))
+		{
+			if (keyPressed == true && PowerGenRepaired == true)
+			{
+				Door3Opened = !Door3Opened;
+				if (Door3Opened == true) {
+					Door3ClosedImageRenderer.enabled = true;
+					Door3Collider.enabled = true;
+				} 
+				else 
+				{
+					Door3ClosedImageRenderer.enabled = false;
+					Door3Collider.enabled = false;
+				}
+			}
+		}
     }
 
     void OnTriggerExit (Collider other)

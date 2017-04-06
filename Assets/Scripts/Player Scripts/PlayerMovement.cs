@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 	private string actionButton;
 	[SerializeField]
 	private string repairButton;
+	[SerializeField]
+	private string restartButton;
 	[Space]
 	[Header("Movement Settings:")]
 	[SerializeField]
@@ -47,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
 	}
 	public bool Action { get; set; }
 	public bool Repair { get; set; }
+	public bool Restart { get; set; }
 
 	void Start ()
     {
@@ -70,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
 		jumpPressed = Input.GetButtonDown (jumpButton);
 		Action = Input.GetButtonDown (actionButton);
 		Repair = Input.GetButton (repairButton);
+		Restart = Input.GetButton (restartButton);
 
 		if (Mathf.Abs (xInput) > inputDeadzone) {
 			xInput *= speed;
@@ -77,6 +81,11 @@ public class PlayerMovement : MonoBehaviour
 
 		if (Mathf.Abs (yInput) > inputDeadzone) {
 			yInput *= speed;
+		}
+
+		if (Restart) {
+			//Restart the level
+			Application.LoadLevel(Application.loadedLevel);
 		}
 	}
 
