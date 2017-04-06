@@ -8,6 +8,8 @@ public class Narrator : MonoBehaviour
     public OxygenController OxygenController;
 
     public Text Narration;
+
+	public bool tutorial;
 	//public GameObject Barrier1;
 	//public GameObject Barrier2;
 
@@ -25,8 +27,10 @@ public class Narrator : MonoBehaviour
 		//Barrier2Collider = Barrier2.GetComponent<Collider> ();
 
 		PowerGenMessageShown = false;
+		if (tutorial == true) {
+			StartCoroutine (Tutorial ());
+		}
 
-		StartCoroutine(Tutorial());
 
 	}
 	
@@ -35,6 +39,7 @@ public class Narrator : MonoBehaviour
     {
 		StartCoroutine(ComputerGuide());
 	}
+
 
     IEnumerator Tutorial()
     {
@@ -67,7 +72,7 @@ public class Narrator : MonoBehaviour
 
 	IEnumerator ComputerGuide()
 	{
-		yield return new WaitForSeconds (45);
+	
 
 		if (HullHoleMessageShown == false)
 		{			
