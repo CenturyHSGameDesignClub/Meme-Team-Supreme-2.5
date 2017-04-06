@@ -18,6 +18,7 @@ public class Narrator : MonoBehaviour
 
 	private bool HullHoleMessageShown;
 	private bool PowerGenMessageShown;
+	private bool done = false;
 
 
 	// Use this for initialization
@@ -29,7 +30,11 @@ public class Narrator : MonoBehaviour
 		PowerGenMessageShown = false;
 		if (tutorial == true) {
 			StartCoroutine (Tutorial ());
+
+		} else {
+			done = true;
 		}
+			
 
 
 	}
@@ -37,7 +42,9 @@ public class Narrator : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		StartCoroutine(ComputerGuide());
+		if (done == true) {
+			StartCoroutine (ComputerGuide ());
+		}
 	}
 
 
@@ -65,6 +72,7 @@ public class Narrator : MonoBehaviour
         Narration.text = "Have fun playing (Title), and do your best not to die, okay?";
         yield return new WaitForSeconds(5);
 		Narration.text = "";
+		done = true;
 		//OxygenController.enabled = true;
 		//Barrier1Collider.enabled = false;
 		//Barrier2Collider.enabled = false;
