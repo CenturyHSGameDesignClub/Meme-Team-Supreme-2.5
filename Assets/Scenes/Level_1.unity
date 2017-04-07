@@ -5888,6 +5888,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restartButton: Restart
+--- !u!114 &2066854172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2066854166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8d9f50a142dc745bb0d80021f9d6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawning: 1
+  spawnInterval: 3
+  Enemy: {fileID: 2069921105}
+--- !u!1 &2069921105 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 196942, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+  m_PrefabInternal: {fileID: 2001907022}
 --- !u!1001 &2072937875
 Prefab:
   m_ObjectHideFlags: 0
