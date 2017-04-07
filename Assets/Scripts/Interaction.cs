@@ -78,8 +78,8 @@ public class Interaction : MonoBehaviour
 	private bool Hull4Repaired;
 
     public bool allHolesRepaired;
-    private bool PowerGenRepaired;
-	private bool OxygenGenRepaired;
+	public bool PowerGenRepaired;
+	public bool OxygenGenRepaired;
 
 	private bool Door1Opened;
 	private bool Door2Opened;
@@ -586,7 +586,7 @@ public class Interaction : MonoBehaviour
 			}
 		}
 
-		else if (other.CompareTag("Piping1") && Piping1Collected == false && PowerGenRepaired == true)
+		else if (other.CompareTag("Piping1") && Piping1Collected == false && keyPressed == true && PowerGenRepaired == true )
 		{
 			Piping1Collected = true;
 			PipingCount++;
@@ -595,7 +595,7 @@ public class Interaction : MonoBehaviour
 			GetComponent<AudioSource>().Play();
 		}
 
-		else if (other.CompareTag("Piping2") && Piping2Collected == false && PowerGenRepaired == true)
+		else if (other.CompareTag("Piping2") && Piping2Collected == false && keyPressed == true && PowerGenRepaired == true)
 		{
 			Piping2Collected = true;
 			PipingCount++;
@@ -604,7 +604,7 @@ public class Interaction : MonoBehaviour
 			GetComponent<AudioSource>().Play();
 		}
 
-		else if (other.CompareTag("Piping3") && Piping3Collected == false && PowerGenRepaired == true)
+		else if (other.CompareTag("Piping3") && Piping3Collected == false && keyPressed == true && PowerGenRepaired == true)
 		{
 			Piping3Collected = true;
 			PipingCount++;
@@ -613,7 +613,7 @@ public class Interaction : MonoBehaviour
 			GetComponent<AudioSource>().Play();
 		}
 
-		else if (other.CompareTag("CO2Converter") && CO2ConverterCollected == false && PowerGenRepaired == true)
+		else if (other.CompareTag("CO2Converter") && CO2ConverterCollected == false && keyPressed == true && PowerGenRepaired == true)
 		{
 			CO2ConverterCollected = true;
 			CO2ConverterRenderer.enabled = false;
@@ -621,7 +621,7 @@ public class Interaction : MonoBehaviour
 			GetComponent<AudioSource>().Play();
 		}
 
-		else if (other.CompareTag("NuclearPowerCell") && NuclearPowerCellCollected == false && PowerGenRepaired == true)
+		else if (other.CompareTag("NuclearPowerCell") && NuclearPowerCellCollected == false && keyPressed == true && PowerGenRepaired == true)
 		{
 			NuclearPowerCellCollected = true;
 			NuclearPowerCellRenderer.enabled = false;
@@ -629,7 +629,7 @@ public class Interaction : MonoBehaviour
 			GetComponent<AudioSource>().Play();
 		}
 
-		else if (other.CompareTag("TorqueWrench") && HasTorqueWrench == false && PowerGenRepaired == true)
+		else if (other.CompareTag("TorqueWrench") && HasTorqueWrench == false && keyPressed == true && PowerGenRepaired == true)
 		{
 			HasTorqueWrench = true;
 			TorqueWrenchImageRenderer.enabled = false;
@@ -637,10 +637,11 @@ public class Interaction : MonoBehaviour
 			GetComponent<AudioSource>().Play();
 		}
 
-		else if (other.CompareTag("OxygenGenerator") && OxygenGenPartsCollected == true && 
-			PowerGenRepaired == true && OxygenGenRepaired == false)
+		else if (other.CompareTag("OxygenConverter") && OxygenGenPartsCollected == true && 
+			PowerGenRepaired == true && keyPressed == true && OxygenGenRepaired == false)
 		{
 			OxygenGenRepaired = true;
+			PipingCount = 0;
 			OxygenGeneratorRepairedImageRenderer.enabled = true;
 			GetComponent<AudioSource>().clip = Clip[2];
 			GetComponent<AudioSource>().Play();
