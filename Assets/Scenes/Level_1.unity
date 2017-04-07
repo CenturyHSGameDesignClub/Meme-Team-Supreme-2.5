@@ -2117,6 +2117,14 @@ Prefab:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: groundLayer.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 196942, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
   m_IsPrefabParent: 0
@@ -2660,6 +2668,14 @@ Prefab:
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: speed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: groundLayer.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 196942, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
@@ -5733,6 +5749,14 @@ Prefab:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: groundLayer.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 196942, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
   m_IsPrefabParent: 0
@@ -5869,6 +5893,14 @@ Prefab:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: groundLayer.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 196942, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
   m_IsPrefabParent: 0
@@ -5899,8 +5931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8d9f50a142dc745bb0d80021f9d6ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawning: 0
-  spawnInterval: 5
+  spawning: 1
+  spawnInterval: 1
   Enemy: {fileID: 2069921105}
 --- !u!1 &2069921105 stripped
 GameObject:
