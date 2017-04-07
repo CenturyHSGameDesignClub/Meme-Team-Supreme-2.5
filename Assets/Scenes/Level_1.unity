@@ -323,11 +323,11 @@ Prefab:
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: GameOverText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 286527566}
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: deathMessage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1112284538}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
   m_IsPrefabParent: 0
@@ -840,7 +840,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22452552, guid: cb8c0c92cafc27c47b0c098a93750e1d, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 22452552, guid: cb8c0c92cafc27c47b0c098a93750e1d, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1537,11 +1537,11 @@ Prefab:
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: GameOverText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 286527566}
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: deathMessage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1112284538}
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: followDistance
       value: 1.25
@@ -1992,11 +1992,11 @@ Prefab:
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: GameOverText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 286527566}
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: deathMessage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1112284538}
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: followDistance
       value: 1.25
@@ -4652,11 +4652,11 @@ Prefab:
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: GameOverText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 286527566}
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: deathMessage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1112284538}
     - target: {fileID: 11471420, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
       propertyPath: followDistance
       value: 1.25
