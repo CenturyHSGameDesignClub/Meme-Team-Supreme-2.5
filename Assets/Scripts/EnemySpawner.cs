@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemySpawner : MonoBehaviour {
 	public bool spawning;
-	public int spawnInterval;
+	public float spawnInterval;
 
 	private bool started = false;
 
