@@ -5108,7 +5108,7 @@ Transform:
   m_PrefabParentObject: {fileID: 458748, guid: 19732b32c700f1942ac77338462bdb48, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 918275537}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7462,8 +7462,7 @@ MonoBehaviour:
   Interaction: {fileID: 1999622307}
   OxygenController: {fileID: 437443495}
   Narration: {fileID: 1684507676}
-  Barrier1: {fileID: 0}
-  Barrier2: {fileID: 0}
+  tutorial: 1
 --- !u!114 &1509367574
 MonoBehaviour:
   m_ObjectHideFlags: 0
