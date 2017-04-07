@@ -25,6 +25,11 @@ TagManager:
   - OxygenCanister4
   - OxygenCanister5
   - Border
+  - Door1
+  - Door2
+  - Door3
+  - Door4
+  - Door5
   layers:
   - Default
   - TransparentFX

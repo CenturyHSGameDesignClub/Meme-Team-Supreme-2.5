@@ -31,6 +31,7 @@ public class EnemyMovementNew : MonoBehaviour
 	private float xInput = 0;
 	private float yInput = 0;
 	private float distanceToPlayer;
+	private float verticalDistanceToPlayer;
 	private bool jumpPressed = false;
 	public float followDistance = 1.5f;
 	private bool isGrounded = true;
@@ -71,7 +72,8 @@ public class EnemyMovementNew : MonoBehaviour
 	void GetInput()
 	{
 		distanceToPlayer = Math.Abs((player.transform.position.z) - (this.transform.position.z));
-		if (distanceToPlayer <= followDistance) {
+		verticalDistanceToPlayer = Math.Abs((player.transform.position.y) - (this.transform.position.y));
+		if ((distanceToPlayer <= followDistance) && (verticalDistanceToPlayer <= 0.25)) {
 			xInput = Math.Sign ((player.transform.position.z) - (this.transform.position.z));
 		}
 		else{
