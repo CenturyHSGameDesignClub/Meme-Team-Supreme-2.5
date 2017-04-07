@@ -8,6 +8,8 @@ public class Narrator : MonoBehaviour
     public OxygenController OxygenController;
 
     public Text Narration;
+
+	public bool tutorial;
 	//public GameObject Barrier1;
 	//public GameObject Barrier2;
 
@@ -16,6 +18,7 @@ public class Narrator : MonoBehaviour
 
 	private bool HullHoleMessageShown;
 	private bool PowerGenMessageShown;
+	private bool done = false;
 
 
 	// Use this for initialization
@@ -25,16 +28,25 @@ public class Narrator : MonoBehaviour
 		//Barrier2Collider = Barrier2.GetComponent<Collider> ();
 
 		PowerGenMessageShown = false;
+		if (tutorial == true) {
+			StartCoroutine (Tutorial ());
 
-		StartCoroutine(Tutorial());
+		} else {
+			done = true;
+		}
+			
+
 
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		StartCoroutine(ComputerGuide());
+		if (done == true) {
+			StartCoroutine (ComputerGuide ());
+		}
 	}
+
 
     IEnumerator Tutorial()
     {
@@ -60,6 +72,7 @@ public class Narrator : MonoBehaviour
         Narration.text = "Have fun playing (Title), and do your best not to die, okay?";
         yield return new WaitForSeconds(5);
 		Narration.text = "";
+		done = true;
 		//OxygenController.enabled = true;
 		//Barrier1Collider.enabled = false;
 		//Barrier2Collider.enabled = false;
@@ -67,7 +80,7 @@ public class Narrator : MonoBehaviour
 
 	IEnumerator ComputerGuide()
 	{
-		yield return new WaitForSeconds (45);
+	
 
 		if (HullHoleMessageShown == false)
 		{			
