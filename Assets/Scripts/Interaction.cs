@@ -27,6 +27,14 @@ public class Interaction : MonoBehaviour
     public GameObject PasscodeBookImage;
     public GameObject PowerGeneratorImage;
     public GameObject PowerGeneratorBrokenImage;
+	public GameObject TorqueWrenchImage;
+	public GameObject NuclearPowerCell;
+	public GameObject Piping1Image;
+	public GameObject Piping2Image;
+	public GameObject Piping3Image;
+	public GameObject CO2Converter;
+	public GameObject OxygenGeneratorRepairedImage;
+
 	
 	public GameObject Door;
 	public GameObject Door2;
@@ -56,6 +64,13 @@ public class Interaction : MonoBehaviour
 	public bool PasscodeBookCollected;
 
 	private bool PowerGenPartsCollected;
+	private bool OxygenGenPartsCollected;
+
+	private bool Piping1Collected;
+	private bool Piping2Collected;
+	private bool Piping3Collected;
+	public bool CO2ConverterCollected;
+	public bool NuclearPowerCellCollected;
 
     private bool Hull1Repaired;
 	private bool Hull2Repaired;
@@ -63,7 +78,8 @@ public class Interaction : MonoBehaviour
 	private bool Hull4Repaired;
 
     public bool allHolesRepaired;
-    private bool PowerGenRepaired;
+	public bool PowerGenRepaired;
+	public bool OxygenGenRepaired;
 
 	private bool Door1Opened;
 	private bool Door2Opened;
@@ -73,9 +89,11 @@ public class Interaction : MonoBehaviour
 
 	public bool HasTorch;
     public bool HasWrench;
+	public bool HasTorqueWrench;
 
 	public int ScrapCount;
 	public int BatteryCount;
+	public int PipingCount;
 
     private Renderer OxygenCanisterFullImage1Renderer;
     private Renderer OxygenCanisterFullImage2Renderer;
@@ -98,6 +116,13 @@ public class Interaction : MonoBehaviour
     private Renderer PasscodeBookImageRenderer;
     private Renderer PowerGeneratorImageRenderer;
     private Renderer PowerGeneratorBrokenImageRenderer;
+	private Renderer TorqueWrenchImageRenderer;
+	private Renderer NuclearPowerCellRenderer;
+	private Renderer Piping1ImageRenderer;
+	private Renderer Piping2ImageRenderer;
+	private Renderer Piping3ImageRenderer;
+	private Renderer CO2ConverterRenderer;
+	private Renderer OxygenGeneratorRepairedImageRenderer;
 
 	private Renderer DoorClosedImageRenderer;
 	private Renderer Door2ClosedImageRenderer;
@@ -130,7 +155,13 @@ public class Interaction : MonoBehaviour
         Battery2Collected = false;
         Battery3Collected = false;
         PasscodeBookCollected = false;
+		Piping1Collected = false;
+		Piping2Collected = false;
+		Piping3Collected = false;
+		CO2ConverterCollected = false;
+		NuclearPowerCellCollected = false;
         PowerGenPartsCollected = false;
+		OxygenGenPartsCollected = false;
 
         Hull1Repaired = false;
 		Hull2Repaired = false;
@@ -139,6 +170,7 @@ public class Interaction : MonoBehaviour
 
         allHolesRepaired = false;
         PowerGenRepaired = false;
+		OxygenGenRepaired = false;
 
 		Door1Opened = false;
 		Door2Opened = false;
@@ -148,9 +180,11 @@ public class Interaction : MonoBehaviour
 
         HasTorch = false;
         HasWrench = false;
+		HasTorqueWrench = false;
 
         ScrapCount = 0;
         BatteryCount = 0;
+		PipingCount = 0;
 
         OxygenCanisterFullImage1Renderer = OxygenCanisterFullImage1.GetComponent<Renderer>();
         OxygenCanisterFullImage2Renderer = OxygenCanisterFullImage2.GetComponent<Renderer>();
@@ -173,6 +207,13 @@ public class Interaction : MonoBehaviour
         PasscodeBookImageRenderer = PasscodeBookImage.GetComponent<Renderer>();
         PowerGeneratorBrokenImageRenderer = PowerGeneratorBrokenImage.GetComponent<Renderer>();
         PowerGeneratorImageRenderer = PowerGeneratorImage.GetComponent<Renderer>();
+		TorqueWrenchImageRenderer = TorqueWrenchImage.GetComponent<Renderer> ();
+		Piping1ImageRenderer = Piping1Image.GetComponent<Renderer> ();
+		Piping2ImageRenderer = Piping2Image.GetComponent<Renderer> ();
+		Piping3ImageRenderer = Piping3Image.GetComponent<Renderer> ();
+		CO2ConverterRenderer = CO2Converter.GetComponent<Renderer> ();
+		NuclearPowerCellRenderer = NuclearPowerCell.GetComponent<Renderer> ();
+		OxygenGeneratorRepairedImageRenderer = OxygenGeneratorRepairedImage.GetComponent<Renderer> ();
 		DoorClosedImageRenderer = Door.GetComponent<Renderer> ();
 		Door2ClosedImageRenderer = Door2.GetComponent<Renderer> ();
 		Door3ClosedImageRenderer = Door3.GetComponent<Renderer> ();
@@ -202,6 +243,12 @@ public class Interaction : MonoBehaviour
             PowerGenPartsCollected = true;
         }
 
+		if (PipingCount == 3 && NuclearPowerCellCollected == true
+		    && CO2ConverterCollected == true && HasTorqueWrench == true) 
+		{
+			OxygenGenPartsCollected = true;
+		}
+			
     }
 
     void OnTriggerStay(Collider other)
@@ -537,6 +584,67 @@ public class Interaction : MonoBehaviour
 					Door5Collider.enabled = false;
 				}
 			}
+		}
+
+		else if (other.CompareTag("Piping1") && Piping1Collected == false && keyPressed == true && PowerGenRepaired == true )
+		{
+			Piping1Collected = true;
+			PipingCount++;
+			Piping1ImageRenderer.enabled = false;
+			GetComponent<AudioSource>().clip = Clip[0];
+			GetComponent<AudioSource>().Play();
+		}
+
+		else if (other.CompareTag("Piping2") && Piping2Collected == false && keyPressed == true && PowerGenRepaired == true)
+		{
+			Piping2Collected = true;
+			PipingCount++;
+			Piping2ImageRenderer.enabled = false;
+			GetComponent<AudioSource>().clip = Clip[0];
+			GetComponent<AudioSource>().Play();
+		}
+
+		else if (other.CompareTag("Piping3") && Piping3Collected == false && keyPressed == true && PowerGenRepaired == true)
+		{
+			Piping3Collected = true;
+			PipingCount++;
+			Piping3ImageRenderer.enabled = false;
+			GetComponent<AudioSource>().clip = Clip[0];
+			GetComponent<AudioSource>().Play();
+		}
+
+		else if (other.CompareTag("CO2Converter") && CO2ConverterCollected == false && keyPressed == true && PowerGenRepaired == true)
+		{
+			CO2ConverterCollected = true;
+			CO2ConverterRenderer.enabled = false;
+			GetComponent<AudioSource>().clip = Clip[0];
+			GetComponent<AudioSource>().Play();
+		}
+
+		else if (other.CompareTag("NuclearPowerCell") && NuclearPowerCellCollected == false && keyPressed == true && PowerGenRepaired == true)
+		{
+			NuclearPowerCellCollected = true;
+			NuclearPowerCellRenderer.enabled = false;
+			GetComponent<AudioSource>().clip = Clip[0];
+			GetComponent<AudioSource>().Play();
+		}
+
+		else if (other.CompareTag("TorqueWrench") && HasTorqueWrench == false && keyPressed == true && PowerGenRepaired == true)
+		{
+			HasTorqueWrench = true;
+			TorqueWrenchImageRenderer.enabled = false;
+			GetComponent<AudioSource>().clip = Clip[0];
+			GetComponent<AudioSource>().Play();
+		}
+
+		else if (other.CompareTag("OxygenConverter") && OxygenGenPartsCollected == true && 
+			PowerGenRepaired == true && keyPressed == true && OxygenGenRepaired == false)
+		{
+			OxygenGenRepaired = true;
+			PipingCount = 0;
+			OxygenGeneratorRepairedImageRenderer.enabled = true;
+			GetComponent<AudioSource>().clip = Clip[2];
+			GetComponent<AudioSource>().Play();
 		}
     }
 
