@@ -11,6 +11,10 @@ public class ItemList : MonoBehaviour
 	public Text Torch;
 	public Text Wrench;
 	public Text Passcode;
+	public Text Pipes;
+	public Text NuclearPowerCell;
+	public Text CO2Converter;
+	public Text TorqueWrench;
 	public Text GameOverText;
 	public Text deathMessage;
 
@@ -23,6 +27,10 @@ public class ItemList : MonoBehaviour
 		Torch  = Torch.GetComponent<Text>();
 		Wrench  = Wrench.GetComponent<Text>();
 		Passcode  = Passcode.GetComponent<Text>();
+		Pipes  = Pipes.GetComponent<Text>();
+		NuclearPowerCell  = NuclearPowerCell.GetComponent<Text>();
+		CO2Converter  = CO2Converter.GetComponent<Text>();
+		TorqueWrench  = TorqueWrench.GetComponent<Text>();
 		GameOverText.text = "";
 		deathMessage.text = "";
 	}
@@ -32,6 +40,7 @@ public class ItemList : MonoBehaviour
 	{
 		Battery.text = "Batteries: " + interact.BatteryCount.ToString();
 		Scrap.text = "Scrap: " + interact.ScrapCount.ToString ();
+		Pipes.text = "Pipes: " + interact.PipingCount.ToString ();
 		if (interact.HasTorch) {
 			Torch.text = "Torch: yes";
 		}
@@ -51,6 +60,27 @@ public class ItemList : MonoBehaviour
 		}
 		else{
 			Passcode.text = "Passcode: no";
+		}
+
+		if (interact.NuclearPowerCellCollected) {
+			NuclearPowerCell.text = "Nuclear PowerCell: yes";
+		}
+		else{
+			NuclearPowerCell.text = "Nuclear PowerCell: no";
+		}
+
+		if (interact.CO2ConverterCollected) {
+			CO2Converter.text = "CO2 Converter: yes";
+		}
+		else{
+			CO2Converter.text = "CO2 Converter: no";
+		}
+
+		if (interact.HasTorqueWrench) {
+			TorqueWrench.text = "Torque Wrench: yes";
+		}
+		else{
+			TorqueWrench.text = "Torque Wrench: no";
 		}
 
 

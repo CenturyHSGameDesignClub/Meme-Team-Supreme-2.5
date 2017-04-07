@@ -116,7 +116,7 @@ public class EnemyMovementNew : MonoBehaviour
 		if (col.transform.gameObject.tag.Equals("Player")) {
 			playerMovement.enabled = false;
 			GameOverText.text = "Game Over";
-			deathMessage.text = "You got killed by an alien.";
+			deathMessage.text = "You got killed by an android.";
 		}
 		//Debug.Log ("OnCollisionEnter");
 		isGrounded = true;
