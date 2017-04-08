@@ -138,6 +138,8 @@ public class Interaction : MonoBehaviour
 
     private bool keyPressed;
 
+	private GameObject other;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -172,11 +174,11 @@ public class Interaction : MonoBehaviour
         PowerGenRepaired = false;
 		OxygenGenRepaired = false;
 
-		Door1Opened = false;
-		Door2Opened = false;
-		Door3Opened = false;
-		Door4Opened = false;
-		Door5Opened = false;
+		Door1Opened = true;
+		Door2Opened = true;
+		Door3Opened = true;
+		Door4Opened = true;
+		Door5Opened = true;
 
         HasTorch = false;
         HasWrench = false;
@@ -225,6 +227,8 @@ public class Interaction : MonoBehaviour
 		Door3Collider = Door3.GetComponent<Collider> ();
 		Door4Collider = Door4.GetComponent<Collider> ();
 		Door5Collider = Door5.GetComponent<Collider> ();
+
+		other = null;
     }
 
 	// Update is called once per frame
@@ -232,6 +236,7 @@ public class Interaction : MonoBehaviour
     {
         keyPressed = Input.GetButtonDown("Interact");
 
+		try {
 		if (Hull1Repaired == true && Hull2Repaired && Hull3Repaired && Hull4Repaired)
         {
             allHolesRepaired = true;
@@ -248,46 +253,46 @@ public class Interaction : MonoBehaviour
 		{
 			OxygenGenPartsCollected = true;
 		}
-			
-    }
 
-    void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag ("OxygenCanister1"))
-        {
-            if (keyPressed == true && OxygenCanister1Full == true)
-            {
-                oxygenController.OxygenTimer = oxygenController.OxygenTimer + 50;
-                OxygenCanisterFullImage1Renderer.enabled = false;
-                OxygenCanister1Full = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		if (OxygenGenRepaired) {
+			StartCoroutine (EndGame());
+		}
 
-        else if (other.CompareTag("OxygenCanister2"))
-        {
-            if (keyPressed == true && OxygenCanister2Full == true)
-            {
-                oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
-                OxygenCanisterFullImage2Renderer.enabled = false;
-                OxygenCanister2Full = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		if (other.CompareTag ("OxygenCanister1"))
+		{
+			if (keyPressed == true && OxygenCanister1Full == true)
+			{
+				oxygenController.OxygenTimer = oxygenController.OxygenTimer + 50;
+				OxygenCanisterFullImage1Renderer.enabled = false;
+				OxygenCanister1Full = false;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
-        else if (other.CompareTag("OxygenCanister3"))
-        {
-            if (keyPressed == true && OxygenCanister3Full == true)
-            {
-                oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
-                OxygenCanisterFullImage3Renderer.enabled = false;
-                OxygenCanister3Full = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		else if (other.CompareTag("OxygenCanister2"))
+		{
+			if (keyPressed == true && OxygenCanister2Full == true)
+			{
+				oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
+				OxygenCanisterFullImage2Renderer.enabled = false;
+				OxygenCanister2Full = false;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
+
+		else if (other.CompareTag("OxygenCanister3"))
+		{
+			if (keyPressed == true && OxygenCanister3Full == true)
+			{
+				oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
+				OxygenCanisterFullImage3Renderer.enabled = false;
+				OxygenCanister3Full = false;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
 		else if (other.CompareTag("OxygenCanister4"))
 		{
@@ -313,17 +318,17 @@ public class Interaction : MonoBehaviour
 			}
 		}
 
-        else if (other.CompareTag("ScrapMetal1"))
-        {
-            if (keyPressed == true && ScrapMetal1Collected == false)
-            {
-                ScrapCount++;
-                ScrapMetal1ImageRenderer.enabled = false;
-                ScrapMetal1Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		else if (other.CompareTag("ScrapMetal1"))
+		{
+			if (keyPressed == true && ScrapMetal1Collected == false)
+			{
+				ScrapCount++;
+				ScrapMetal1ImageRenderer.enabled = false;
+				ScrapMetal1Collected = true;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
 		else if (other.CompareTag("ScrapMetal2"))
 		{
@@ -332,8 +337,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount++;
 				ScrapMetal2ImageRenderer.enabled = false;
 				ScrapMetal2Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
 			}
 		}
 
@@ -344,8 +349,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount++;
 				ScrapMetal3ImageRenderer.enabled = false;
 				ScrapMetal3Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
 			}
 		}
 
@@ -356,23 +361,23 @@ public class Interaction : MonoBehaviour
 				ScrapCount++;
 				ScrapMetal4ImageRenderer.enabled = false;
 				ScrapMetal4Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
 			}
 		}
 
-        else if (other.CompareTag("HullHole1"))
-        {
-            if (keyPressed == true && ScrapCount >= 1 &&
-                HasTorch == true && Hull1Repaired == false)
-            {
-                ScrapCount--;
-                Hull1RepairedImageRenderer.enabled = true;
-                Hull1Repaired = true;
-                GetComponent<AudioSource>().clip = Clip[1];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		else if (other.CompareTag("HullHole1"))
+		{
+			if (keyPressed == true && ScrapCount >= 1 &&
+				HasTorch == true && Hull1Repaired == false)
+			{
+				ScrapCount--;
+				Hull1RepairedImageRenderer.enabled = true;
+				Hull1Repaired = true;
+				GetComponent<AudioSource>().clip = Clip[1];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
 		else if (other.CompareTag("HullHole2"))
 		{
@@ -382,8 +387,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount--;
 				Hull2RepairedImageRenderer.enabled = true;
 				Hull2Repaired = true;
-                GetComponent<AudioSource>().clip = Clip[1];
-                GetComponent<AudioSource>().Play();
+				GetComponent<AudioSource>().clip = Clip[1];
+				GetComponent<AudioSource>().Play();
 			}
 		}
 
@@ -408,98 +413,98 @@ public class Interaction : MonoBehaviour
 				ScrapCount--;
 				Hull4RepairedImageRenderer.enabled = true;
 				Hull4Repaired = true;
-                GetComponent<AudioSource>().clip = Clip[1];
-                GetComponent<AudioSource>().Play();
+				GetComponent<AudioSource>().clip = Clip[1];
+				GetComponent<AudioSource>().Play();
 			}
 		}
 
-        else if (other.CompareTag("WeldingTorch"))
-        {
-            if(keyPressed == true && HasTorch == false)
-            {
-                HasTorch = true;
-                TorchImageRenderer.enabled = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		else if (other.CompareTag("WeldingTorch"))
+		{
+			if(keyPressed == true && HasTorch == false)
+			{
+				HasTorch = true;
+				TorchImageRenderer.enabled = false;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
-        else if (other.CompareTag("Battery1"))
-        {
-            if (keyPressed == true && Battery1Collected == false
-                && allHolesRepaired == true)
-            {
-                BatteryCount++;
-                Battery1ImageRenderer.enabled = false;
-                Battery1Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		else if (other.CompareTag("Battery1"))
+		{
+			if (keyPressed == true && Battery1Collected == false
+				&& allHolesRepaired == true)
+			{
+				BatteryCount++;
+				Battery1ImageRenderer.enabled = false;
+				Battery1Collected = true;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
-        else if (other.CompareTag("Battery2"))
-        {
-            if (keyPressed == true && Battery2Collected == false
-                && allHolesRepaired == true)
-            {
-                BatteryCount++;
-                Battery2ImageRenderer.enabled = false;
-                Battery2Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		else if (other.CompareTag("Battery2"))
+		{
+			if (keyPressed == true && Battery2Collected == false
+				&& allHolesRepaired == true)
+			{
+				BatteryCount++;
+				Battery2ImageRenderer.enabled = false;
+				Battery2Collected = true;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
-        else if (other.CompareTag("Battery3"))
-        {
-            if (keyPressed == true && Battery3Collected == false
-                && allHolesRepaired == true)
-            {
-                BatteryCount++;
-                Battery3ImageRenderer.enabled = false;
-                Battery3Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		else if (other.CompareTag("Battery3"))
+		{
+			if (keyPressed == true && Battery3Collected == false
+				&& allHolesRepaired == true)
+			{
+				BatteryCount++;
+				Battery3ImageRenderer.enabled = false;
+				Battery3Collected = true;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
-        else if (other.CompareTag("Wrench"))
-        {
-            if (keyPressed == true && HasWrench == false
-                && allHolesRepaired == true)
-            {
-                HasWrench = true;
-                WrenchImageRenderer.enabled = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		else if (other.CompareTag("Wrench"))
+		{
+			if (keyPressed == true && HasWrench == false
+				&& allHolesRepaired == true)
+			{
+				HasWrench = true;
+				WrenchImageRenderer.enabled = false;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
-        else if (other.CompareTag("PasscodeBook"))
-        {
-            if (keyPressed == true && PasscodeBookCollected == false
-                && allHolesRepaired == true)
-            {
-                PasscodeBookCollected = true;
-                PasscodeBookImageRenderer.enabled = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		else if (other.CompareTag("PasscodeBook"))
+		{
+			if (keyPressed == true && PasscodeBookCollected == false
+				&& allHolesRepaired == true)
+			{
+				PasscodeBookCollected = true;
+				PasscodeBookImageRenderer.enabled = false;
+				GetComponent<AudioSource>().clip = Clip[0];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
-        else if (other.CompareTag("PowerGenerator"))
-        {
-            if (keyPressed == true && PowerGenPartsCollected == true
-                && PowerGenRepaired == false)
-            {
-                PowerGenRepaired = true;
-                BatteryCount -= 3;
-                PowerGeneratorImageRenderer.enabled = true;
-                PowerGeneratorBrokenImageRenderer.enabled = false;
-                GetComponent<AudioSource>().clip = Clip[2];
-                GetComponent<AudioSource>().Play();
-            }
-        }
+		else if (other.CompareTag("PowerGenerator"))
+		{
+			if (keyPressed == true && PowerGenPartsCollected == true
+				&& PowerGenRepaired == false)
+			{
+				PowerGenRepaired = true;
+				BatteryCount -= 3;
+				PowerGeneratorImageRenderer.enabled = true;
+				PowerGeneratorBrokenImageRenderer.enabled = false;
+				GetComponent<AudioSource>().clip = Clip[2];
+				GetComponent<AudioSource>().Play();
+			}
+		}
 
 		else if (other.CompareTag("Door1"))
 		{
@@ -666,21 +671,22 @@ public class Interaction : MonoBehaviour
 			GetComponent<AudioSource>().clip = Clip[2];
 			GetComponent<AudioSource>().Play();
 		}
-
-		if (OxygenGenRepaired) {
-			StartCoroutine (EndGame());
-		}
+		} catch (UnassignedReferenceException e) {
+			Debug.Log ("empty...");
+		} catch (MissingComponentException e ) {
+		} catch (MissingReferenceException e ) {
+		} 
     }
 
-	IEnumerator EndGame()
+	void OnTriggerEnter(Collider other)
 	{
-		yield return new WaitForSeconds (1f);
-
-		Application.LoadLevel ("EndGame");
+		this.other = other.gameObject;
 	}
 
     void OnTriggerExit (Collider other)
     {
+		this.other = null;
+
         if (other.CompareTag("Border"))
         {
             GameOverText.text = "Game Over";
@@ -690,4 +696,11 @@ public class Interaction : MonoBehaviour
             GetComponent<AudioSource>().Play();
         }
     }
+
+	IEnumerator EndGame()
+	{
+		yield return new WaitForSeconds (1f);
+
+		Application.LoadLevel ("EndGame");
+	}
 }
