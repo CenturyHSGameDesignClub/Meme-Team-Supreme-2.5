@@ -509,11 +509,15 @@ public class Interaction : MonoBehaviour
 				if (Door1Opened == true) {
 					DoorClosedImageRenderer.enabled = true;
 					DoorCollider.enabled = true;
+					GetComponent<AudioSource>().clip = Clip[3];
+					GetComponent<AudioSource>().Play();
 				} 
 				else 
 				{
 					DoorClosedImageRenderer.enabled = false;
 					DoorCollider.enabled = false;
+					GetComponent<AudioSource>().clip = Clip[3];
+					GetComponent<AudioSource>().Play();
 				}
 			}
 		}
@@ -526,11 +530,15 @@ public class Interaction : MonoBehaviour
 				if (Door2Opened == true) {
 					Door2ClosedImageRenderer.enabled = true;
 					Door2Collider.enabled = true;
+					GetComponent<AudioSource>().clip = Clip[3];
+					GetComponent<AudioSource>().Play();
 				} 
 				else 
 				{
 					Door2ClosedImageRenderer.enabled = false;
 					Door2Collider.enabled = false;
+					GetComponent<AudioSource>().clip = Clip[3];
+					GetComponent<AudioSource>().Play();
 				}
 			}
 		}
@@ -543,11 +551,15 @@ public class Interaction : MonoBehaviour
 				if (Door3Opened == true) {
 					Door3ClosedImageRenderer.enabled = true;
 					Door3Collider.enabled = true;
+					GetComponent<AudioSource>().clip = Clip[3];
+					GetComponent<AudioSource>().Play();
 				} 
 				else 
 				{
 					Door3ClosedImageRenderer.enabled = false;
 					Door3Collider.enabled = false;
+					GetComponent<AudioSource>().clip = Clip[3];
+					GetComponent<AudioSource>().Play();
 				}
 			}
 		}
@@ -560,11 +572,15 @@ public class Interaction : MonoBehaviour
 				if (Door4Opened == true) {
 					Door4ClosedImageRenderer.enabled = true;
 					Door4Collider.enabled = true;
+					GetComponent<AudioSource>().clip = Clip[3];
+					GetComponent<AudioSource>().Play();
 				} 
 				else 
 				{
 					Door4ClosedImageRenderer.enabled = false;
 					Door4Collider.enabled = false;
+					GetComponent<AudioSource>().clip = Clip[3];
+					GetComponent<AudioSource>().Play();
 				}
 			}
 		}
@@ -577,11 +593,15 @@ public class Interaction : MonoBehaviour
 				if (Door5Opened == true) {
 					Door5ClosedImageRenderer.enabled = true;
 					Door5Collider.enabled = true;
+					GetComponent<AudioSource>().clip = Clip[3];
+					GetComponent<AudioSource>().Play();
 				} 
 				else 
 				{
 					Door5ClosedImageRenderer.enabled = false;
 					Door5Collider.enabled = false;
+					GetComponent<AudioSource>().clip = Clip[3];
+					GetComponent<AudioSource>().Play();
 				}
 			}
 		}
@@ -646,7 +666,18 @@ public class Interaction : MonoBehaviour
 			GetComponent<AudioSource>().clip = Clip[2];
 			GetComponent<AudioSource>().Play();
 		}
+
+		if (OxygenGenRepaired) {
+			StartCoroutine (EndGame());
+		}
     }
+
+	IEnumerator EndGame()
+	{
+		yield return new WaitForSeconds (1f);
+
+		Application.LoadLevel ("EndGame");
+	}
 
     void OnTriggerExit (Collider other)
     {

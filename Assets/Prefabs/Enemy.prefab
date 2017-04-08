@@ -5,9 +5,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 425904}
+  - component: {fileID: 425904}
   m_Layer: 0
   m_Name: SecondDistal.R
   m_TagString: Untagged
@@ -20,10 +20,10 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 496678}
-  - 137: {fileID: 13704814}
+  - component: {fileID: 496678}
+  - component: {fileID: 13704814}
   m_Layer: 0
   m_Name: CyberSoldier
   m_TagString: Untagged
@@ -36,9 +36,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 460210}
+  - component: {fileID: 460210}
   m_Layer: 0
   m_Name: Toe.L
   m_TagString: Untagged
@@ -51,9 +51,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 436280}
+  - component: {fileID: 436280}
   m_Layer: 0
   m_Name: Toe.R
   m_TagString: Untagged
@@ -66,9 +66,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 444144}
+  - component: {fileID: 444144}
   m_Layer: 0
   m_Name: ThumbDistal.R
   m_TagString: Untagged
@@ -81,9 +81,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 416244}
+  - component: {fileID: 416244}
   m_Layer: 0
   m_Name: FirstProximal.L
   m_TagString: Untagged
@@ -96,9 +96,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 443820}
+  - component: {fileID: 443820}
   m_Layer: 0
   m_Name: FirstMiddle.L
   m_TagString: Untagged
@@ -111,9 +111,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 404634}
+  - component: {fileID: 404634}
   m_Layer: 0
   m_Name: FirstDistal.L
   m_TagString: Untagged
@@ -126,9 +126,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 434256}
+  - component: {fileID: 434256}
   m_Layer: 0
   m_Name: Foot.R
   m_TagString: Untagged
@@ -141,9 +141,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 440424}
+  - component: {fileID: 440424}
   m_Layer: 0
   m_Name: LowerArm.L
   m_TagString: Untagged
@@ -156,9 +156,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 460576}
+  - component: {fileID: 460576}
   m_Layer: 0
   m_Name: Hips
   m_TagString: Untagged
@@ -171,9 +171,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 495060}
+  - component: {fileID: 495060}
   m_Layer: 0
   m_Name: FirstProximal.R
   m_TagString: Untagged
@@ -186,9 +186,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 464692}
+  - component: {fileID: 464692}
   m_Layer: 0
   m_Name: Armature
   m_TagString: Untagged
@@ -201,9 +201,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 453384}
+  - component: {fileID: 453384}
   m_Layer: 0
   m_Name: SecondMiddle.L
   m_TagString: Untagged
@@ -216,9 +216,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 428434}
+  - component: {fileID: 428434}
   m_Layer: 0
   m_Name: LowerArm.R
   m_TagString: Untagged
@@ -231,9 +231,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 490162}
+  - component: {fileID: 490162}
   m_Layer: 0
   m_Name: FirstDistal.R
   m_TagString: Untagged
@@ -246,9 +246,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 444686}
+  - component: {fileID: 444686}
   m_Layer: 0
   m_Name: Shoulder.R
   m_TagString: Untagged
@@ -261,9 +261,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 457080}
+  - component: {fileID: 457080}
   m_Layer: 0
   m_Name: ThumbDistal.L
   m_TagString: Untagged
@@ -276,9 +276,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 483730}
+  - component: {fileID: 483730}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -291,9 +291,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 413202}
+  - component: {fileID: 413202}
   m_Layer: 0
   m_Name: Shoulder.L
   m_TagString: Untagged
@@ -306,9 +306,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 499388}
+  - component: {fileID: 499388}
   m_Layer: 0
   m_Name: Hand.L
   m_TagString: Untagged
@@ -321,9 +321,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 470704}
+  - component: {fileID: 470704}
   m_Layer: 0
   m_Name: UpperArm.l
   m_TagString: Untagged
@@ -336,9 +336,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 409688}
+  - component: {fileID: 409688}
   m_Layer: 0
   m_Name: UpperArm.r
   m_TagString: Untagged
@@ -351,9 +351,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 495520}
+  - component: {fileID: 495520}
   m_Layer: 0
   m_Name: ThumbMiddle.L
   m_TagString: Untagged
@@ -366,9 +366,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 421698}
+  - component: {fileID: 421698}
   m_Layer: 0
   m_Name: Hand.R
   m_TagString: Untagged
@@ -381,9 +381,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 468820}
+  - component: {fileID: 468820}
   m_Layer: 0
   m_Name: SecondMiddle.R
   m_TagString: Untagged
@@ -396,9 +396,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 416474}
+  - component: {fileID: 416474}
   m_Layer: 0
   m_Name: FirstMiddle.R
   m_TagString: Untagged
@@ -411,9 +411,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 499478}
+  - component: {fileID: 499478}
   m_Layer: 0
   m_Name: ThumbProximal.R
   m_TagString: Untagged
@@ -426,10 +426,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 473876}
-  - 95: {fileID: 9509808}
+  - component: {fileID: 473876}
+  - component: {fileID: 9509808}
   m_Layer: 0
   m_Name: CyberSoldier
   m_TagString: Untagged
@@ -442,9 +442,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 420286}
+  - component: {fileID: 420286}
   m_Layer: 0
   m_Name: SecondProximal.R
   m_TagString: Untagged
@@ -457,9 +457,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 492532}
+  - component: {fileID: 492532}
   m_Layer: 0
   m_Name: Spine
   m_TagString: Untagged
@@ -472,9 +472,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 425290}
+  - component: {fileID: 425290}
   m_Layer: 0
   m_Name: Foot.L
   m_TagString: Untagged
@@ -487,9 +487,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 483660}
+  - component: {fileID: 483660}
   m_Layer: 0
   m_Name: Neck
   m_TagString: Untagged
@@ -502,9 +502,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 420100}
+  - component: {fileID: 420100}
   m_Layer: 0
   m_Name: ThumbProximal.L
   m_TagString: Untagged
@@ -517,9 +517,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 429300}
+  - component: {fileID: 429300}
   m_Layer: 0
   m_Name: LowerLeg.R
   m_TagString: Untagged
@@ -532,9 +532,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 456962}
+  - component: {fileID: 456962}
   m_Layer: 0
   m_Name: UpperLeg.L
   m_TagString: Untagged
@@ -547,9 +547,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 482702}
+  - component: {fileID: 482702}
   m_Layer: 0
   m_Name: SecondDistal.L
   m_TagString: Untagged
@@ -562,9 +562,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 432178}
+  - component: {fileID: 432178}
   m_Layer: 0
   m_Name: ThumbMiddle.R
   m_TagString: Untagged
@@ -577,9 +577,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 430924}
+  - component: {fileID: 430924}
   m_Layer: 0
   m_Name: SecondProximal.L
   m_TagString: Untagged
@@ -592,13 +592,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 426770}
-  - 54: {fileID: 5437740}
-  - 136: {fileID: 13690638}
-  - 82: {fileID: 8261232}
-  - 114: {fileID: 11471420}
+  - component: {fileID: 426770}
+  - component: {fileID: 5437740}
+  - component: {fileID: 13690638}
+  - component: {fileID: 8261232}
+  - component: {fileID: 11471420}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Player
@@ -611,9 +611,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 425036}
+  - component: {fileID: 425036}
   m_Layer: 0
   m_Name: LowerLeg.L
   m_TagString: Untagged
@@ -626,9 +626,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400482}
+  - component: {fileID: 400482}
   m_Layer: 0
   m_Name: UpperLeg.R
   m_TagString: Untagged
@@ -641,9 +641,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 460662}
+  - component: {fileID: 460662}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -664,6 +664,7 @@ Transform:
   - {fileID: 429300}
   m_Father: {fileID: 460576}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &404634
 Transform:
   m_ObjectHideFlags: 1
@@ -676,6 +677,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 443820}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &409688
 Transform:
   m_ObjectHideFlags: 1
@@ -689,6 +691,7 @@ Transform:
   - {fileID: 428434}
   m_Father: {fileID: 444686}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &413202
 Transform:
   m_ObjectHideFlags: 1
@@ -702,6 +705,7 @@ Transform:
   - {fileID: 470704}
   m_Father: {fileID: 483730}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &416244
 Transform:
   m_ObjectHideFlags: 1
@@ -715,6 +719,7 @@ Transform:
   - {fileID: 443820}
   m_Father: {fileID: 499388}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &416474
 Transform:
   m_ObjectHideFlags: 1
@@ -728,6 +733,7 @@ Transform:
   - {fileID: 490162}
   m_Father: {fileID: 495060}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &420100
 Transform:
   m_ObjectHideFlags: 1
@@ -741,6 +747,7 @@ Transform:
   - {fileID: 495520}
   m_Father: {fileID: 499388}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &420286
 Transform:
   m_ObjectHideFlags: 1
@@ -754,6 +761,7 @@ Transform:
   - {fileID: 468820}
   m_Father: {fileID: 421698}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &421698
 Transform:
   m_ObjectHideFlags: 1
@@ -769,6 +777,7 @@ Transform:
   - {fileID: 499478}
   m_Father: {fileID: 428434}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &425036
 Transform:
   m_ObjectHideFlags: 1
@@ -782,6 +791,7 @@ Transform:
   - {fileID: 425290}
   m_Father: {fileID: 456962}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &425290
 Transform:
   m_ObjectHideFlags: 1
@@ -795,6 +805,7 @@ Transform:
   - {fileID: 460210}
   m_Father: {fileID: 425036}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &425904
 Transform:
   m_ObjectHideFlags: 1
@@ -807,6 +818,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 468820}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &426770
 Transform:
   m_ObjectHideFlags: 1
@@ -814,12 +826,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07980728, y: 0, z: -16.028101}
+  m_LocalPosition: {x: -0.05633831, y: 4.861, z: -9.937004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 473876}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &428434
 Transform:
   m_ObjectHideFlags: 1
@@ -833,6 +846,7 @@ Transform:
   - {fileID: 421698}
   m_Father: {fileID: 409688}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &429300
 Transform:
   m_ObjectHideFlags: 1
@@ -846,6 +860,7 @@ Transform:
   - {fileID: 434256}
   m_Father: {fileID: 400482}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &430924
 Transform:
   m_ObjectHideFlags: 1
@@ -859,6 +874,7 @@ Transform:
   - {fileID: 453384}
   m_Father: {fileID: 499388}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &432178
 Transform:
   m_ObjectHideFlags: 1
@@ -872,6 +888,7 @@ Transform:
   - {fileID: 444144}
   m_Father: {fileID: 499478}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &434256
 Transform:
   m_ObjectHideFlags: 1
@@ -885,6 +902,7 @@ Transform:
   - {fileID: 436280}
   m_Father: {fileID: 429300}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &436280
 Transform:
   m_ObjectHideFlags: 1
@@ -897,6 +915,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 434256}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &440424
 Transform:
   m_ObjectHideFlags: 1
@@ -910,6 +929,7 @@ Transform:
   - {fileID: 499388}
   m_Father: {fileID: 470704}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &443820
 Transform:
   m_ObjectHideFlags: 1
@@ -923,6 +943,7 @@ Transform:
   - {fileID: 404634}
   m_Father: {fileID: 416244}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &444144
 Transform:
   m_ObjectHideFlags: 1
@@ -935,6 +956,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 432178}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &444686
 Transform:
   m_ObjectHideFlags: 1
@@ -948,6 +970,7 @@ Transform:
   - {fileID: 409688}
   m_Father: {fileID: 483730}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &453384
 Transform:
   m_ObjectHideFlags: 1
@@ -961,6 +984,7 @@ Transform:
   - {fileID: 482702}
   m_Father: {fileID: 430924}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &456962
 Transform:
   m_ObjectHideFlags: 1
@@ -974,6 +998,7 @@ Transform:
   - {fileID: 425036}
   m_Father: {fileID: 460576}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &457080
 Transform:
   m_ObjectHideFlags: 1
@@ -986,6 +1011,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 495520}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &460210
 Transform:
   m_ObjectHideFlags: 1
@@ -998,6 +1024,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 425290}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &460576
 Transform:
   m_ObjectHideFlags: 1
@@ -1013,6 +1040,7 @@ Transform:
   - {fileID: 400482}
   m_Father: {fileID: 464692}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &460662
 Transform:
   m_ObjectHideFlags: 1
@@ -1025,6 +1053,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 483660}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &464692
 Transform:
   m_ObjectHideFlags: 1
@@ -1038,6 +1067,7 @@ Transform:
   - {fileID: 460576}
   m_Father: {fileID: 473876}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &468820
 Transform:
   m_ObjectHideFlags: 1
@@ -1051,6 +1081,7 @@ Transform:
   - {fileID: 425904}
   m_Father: {fileID: 420286}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &470704
 Transform:
   m_ObjectHideFlags: 1
@@ -1064,6 +1095,7 @@ Transform:
   - {fileID: 440424}
   m_Father: {fileID: 413202}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &473876
 Transform:
   m_ObjectHideFlags: 1
@@ -1078,6 +1110,7 @@ Transform:
   - {fileID: 496678}
   m_Father: {fileID: 426770}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &482702
 Transform:
   m_ObjectHideFlags: 1
@@ -1090,6 +1123,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 453384}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &483660
 Transform:
   m_ObjectHideFlags: 1
@@ -1103,6 +1137,7 @@ Transform:
   - {fileID: 460662}
   m_Father: {fileID: 483730}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &483730
 Transform:
   m_ObjectHideFlags: 1
@@ -1119,6 +1154,7 @@ Transform:
   - {fileID: 444686}
   m_Father: {fileID: 492532}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &490162
 Transform:
   m_ObjectHideFlags: 1
@@ -1131,6 +1167,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 416474}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &492532
 Transform:
   m_ObjectHideFlags: 1
@@ -1144,6 +1181,7 @@ Transform:
   - {fileID: 483730}
   m_Father: {fileID: 460576}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &495060
 Transform:
   m_ObjectHideFlags: 1
@@ -1157,6 +1195,7 @@ Transform:
   - {fileID: 416474}
   m_Father: {fileID: 421698}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &495520
 Transform:
   m_ObjectHideFlags: 1
@@ -1170,6 +1209,7 @@ Transform:
   - {fileID: 457080}
   m_Father: {fileID: 420100}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &496678
 Transform:
   m_ObjectHideFlags: 1
@@ -1182,6 +1222,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473876}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &499388
 Transform:
   m_ObjectHideFlags: 1
@@ -1197,6 +1238,7 @@ Transform:
   - {fileID: 420100}
   m_Father: {fileID: 440424}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &499478
 Transform:
   m_ObjectHideFlags: 1
@@ -1210,6 +1252,7 @@ Transform:
   - {fileID: 432178}
   m_Father: {fileID: 421698}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &5437740
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -1241,6 +1284,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 0
+  SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -1253,12 +1297,14 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -1269,7 +1315,8 @@ AudioSource:
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -1280,7 +1327,8 @@ AudioSource:
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -1291,7 +1339,8 @@ AudioSource:
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
@@ -1336,7 +1385,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  followDistance: 1.25
+  followDistance: 1.5
   player: {fileID: 0}
   playerMovement: {fileID: 0}
   GameOverText: {fileID: 0}
@@ -1363,26 +1412,33 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 98ec97c496fac904a811768eda3cc3f2, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300000, guid: cf3910b7639e12447827e45f63f60201, type: 3}
   m_Bones:
   - {fileID: 460576}

@@ -9,6 +9,11 @@ public class MainMenuLogic : MonoBehaviour
 	[SerializeField]
 	private string tutorialScene;
 
+	void Start()
+	{
+		Time.timeScale = 1f;
+	}
+
 	//attached to a button - starts the game
 	public void Play()
 	{
