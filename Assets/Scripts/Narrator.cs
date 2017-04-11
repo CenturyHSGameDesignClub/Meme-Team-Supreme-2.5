@@ -18,6 +18,7 @@ public class Narrator : MonoBehaviour
 
 	private bool HullHoleMessageShown;
 	private bool PowerGenMessageShown;
+	private bool OxygenGenMessageShown;
 	private bool done = false;
 
 
@@ -51,13 +52,13 @@ public class Narrator : MonoBehaviour
     IEnumerator Tutorial()
     {
 		OxygenController.enabled = false;
-        Narration.text = "Welcome to (Game title goes here)";
+        Narration.text = "Welcome to Into the Void";
         yield return new WaitForSeconds(5);
         Narration.text = "Press A and D to move left and right";
         yield return new WaitForSeconds(5);
         Narration.text = "Press Space to jump";
         yield return new WaitForSeconds(5);
-        Narration.text = "Hold W or S to climb latters";
+        Narration.text = "Hold W or S to climb ladders";
         yield return new WaitForSeconds(5);
         Narration.text = "Walk up to an object and press 'E' to pick up or repair that object.";
         yield return new WaitForSeconds(5);
@@ -69,7 +70,7 @@ public class Narrator : MonoBehaviour
 		yield return new WaitForSeconds(5);
 		Narration.text = "Then you will be able to pick up the book, batteries and wrench, to restore power.";
 		yield return new WaitForSeconds(5);*/
-        Narration.text = "Have fun playing (Title), and do your best not to die, okay?";
+        Narration.text = "Have fun playing Into the Void, and do your best not to die, okay?";
         yield return new WaitForSeconds(5);
 		Narration.text = "";
 		done = true;
@@ -99,6 +100,16 @@ public class Narrator : MonoBehaviour
 			yield return new WaitForSeconds (5);
 			Narration.text = "We need 3 batteries, a wrench, and the startup passcode to restore power.";
 			yield return new WaitForSeconds (5);
+			Narration.text = "";
+		}
+
+		if (Interaction.PowerGenRepaired == true && OxygenGenMessageShown == false) 
+		{
+			OxygenGenMessageShown = true;
+			Narration.text = "Since the Power Generator is functional, we now need to activate the Oxygen Converter.";
+			yield return new WaitForSeconds (5);
+			Narration.text = "The converter requires 3 pipes, a new CO2 Converter, a nuclear power cell, and a torque wrench to return to an operational state.";
+			yield return new WaitForSeconds (7);
 			Narration.text = "";
 		}
 	}
