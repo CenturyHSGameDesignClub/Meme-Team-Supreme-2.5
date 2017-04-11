@@ -499,6 +499,10 @@ Prefab:
       propertyPath: deathMessage
       value: 
       objectReference: {fileID: 1112284538}
+    - target: {fileID: 196942, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
   m_IsPrefabParent: 0
@@ -2739,6 +2743,10 @@ Prefab:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 196942, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
   m_IsPrefabParent: 0
@@ -2848,7 +2856,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1001 &755422360
 Prefab:
   m_ObjectHideFlags: 0
@@ -3991,6 +3999,10 @@ Prefab:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 196942, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
   m_IsPrefabParent: 0
@@ -4887,6 +4899,26 @@ Prefab:
       propertyPath: OxygenGeneratorRepairedImage
       value: 
       objectReference: {fileID: 2113597578}
+    - target: {fileID: 11470070, guid: 14688481e14740a4eb6f98239227cbf8, type: 2}
+      propertyPath: Clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 62874b6e7216cad4385a9d0e2584aec8, type: 3}
+    - target: {fileID: 11470070, guid: 14688481e14740a4eb6f98239227cbf8, type: 2}
+      propertyPath: Clip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 62874b6e7216cad4385a9d0e2584aec8, type: 3}
+    - target: {fileID: 11470070, guid: 14688481e14740a4eb6f98239227cbf8, type: 2}
+      propertyPath: Clip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 62874b6e7216cad4385a9d0e2584aec8, type: 3}
+    - target: {fileID: 11470070, guid: 14688481e14740a4eb6f98239227cbf8, type: 2}
+      propertyPath: Clip.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 62874b6e7216cad4385a9d0e2584aec8, type: 3}
+    - target: {fileID: 11470070, guid: 14688481e14740a4eb6f98239227cbf8, type: 2}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 1720237893}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14688481e14740a4eb6f98239227cbf8, type: 2}
   m_IsPrefabParent: 0
@@ -7341,6 +7373,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 461636, guid: 658ad2c9ee4b6844aaebb12a56facfae, type: 2}
   m_PrefabInternal: {fileID: 1716781866}
+--- !u!1 &1720237893 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 129588, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
+  m_PrefabInternal: {fileID: 1632659947}
 --- !u!1001 &1723438332
 Prefab:
   m_ObjectHideFlags: 0
@@ -9373,6 +9409,10 @@ Prefab:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 196942, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3a7ed0a45a260d429f05c5a5595f25a, type: 2}
   m_IsPrefabParent: 0
@@ -9404,7 +9444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawning: 0
-  spawnInterval: 5
+  spawnInterval: 1
+  interact: {fileID: 1129739779}
   Enemy: {fileID: 859122972}
 --- !u!1001 &2072937875
 Prefab:

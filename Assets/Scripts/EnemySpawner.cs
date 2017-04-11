@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemySpawner : MonoBehaviour {
 	public bool spawning;
 	public float spawnInterval;
+	public Interaction interact;
 
 	private bool started = false;
 
@@ -20,6 +21,10 @@ public class EnemySpawner : MonoBehaviour {
 			StartCoroutine (spawn ());
 			started = true;
 		}
+
+		if(interact.OxygenGenRepaired){
+			spawning = true;
+		}
 			
 
 	}
@@ -29,6 +34,7 @@ public class EnemySpawner : MonoBehaviour {
 		float randomY = Random.Range (0.5f, 4.5f);
 		Vector3 randomPosition = new Vector3 (0f, randomY, Random.Range(1.5f, -16f));
 		Instantiate (Enemy, randomPosition, Quaternion.identity);
+		Instantiate (interact.music);
 		yield return new WaitForSeconds (spawnInterval);
 		if (spawning) {
 			StartCoroutine (spawn ());

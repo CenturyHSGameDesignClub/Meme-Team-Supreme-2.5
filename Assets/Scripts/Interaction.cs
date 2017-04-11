@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
+	public GameObject music;
+
     public OxygenController oxygenController;
 
     public GameObject OxygenCanisterFullImage1;
@@ -260,8 +262,7 @@ public class Interaction : MonoBehaviour
                 oxygenController.OxygenTimer = oxygenController.OxygenTimer + 50;
                 OxygenCanisterFullImage1Renderer.enabled = false;
                 OxygenCanister1Full = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+				Instantiate (music);
             }
         }
 
@@ -272,8 +273,7 @@ public class Interaction : MonoBehaviour
                 oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
                 OxygenCanisterFullImage2Renderer.enabled = false;
                 OxygenCanister2Full = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+				Instantiate (music);
             }
         }
 
@@ -284,8 +284,7 @@ public class Interaction : MonoBehaviour
                 oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
                 OxygenCanisterFullImage3Renderer.enabled = false;
                 OxygenCanister3Full = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+				Instantiate (music);
             }
         }
 
@@ -296,8 +295,7 @@ public class Interaction : MonoBehaviour
 				oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
 				OxygenCanisterFullImage4Renderer.enabled = false;
 				OxygenCanister4Full = false;
-				GetComponent<AudioSource>().clip = Clip[0];
-				GetComponent<AudioSource>().Play();
+				Instantiate (music);
 			}
 		}
 
@@ -308,8 +306,7 @@ public class Interaction : MonoBehaviour
 				oxygenController.OxygenTimer = oxygenController.OxygenTimer + 60;
 				OxygenCanisterFullImage5Renderer.enabled = false;
 				OxygenCanister5Full = false;
-				GetComponent<AudioSource>().clip = Clip[0];
-				GetComponent<AudioSource>().Play();
+				Instantiate (music);
 			}
 		}
 
@@ -320,8 +317,7 @@ public class Interaction : MonoBehaviour
                 ScrapCount++;
                 ScrapMetal1ImageRenderer.enabled = false;
                 ScrapMetal1Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+				Instantiate (music);
             }
         }
 
@@ -332,8 +328,7 @@ public class Interaction : MonoBehaviour
 				ScrapCount++;
 				ScrapMetal2ImageRenderer.enabled = false;
 				ScrapMetal2Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
 			}
 		}
 
@@ -344,8 +339,7 @@ public class Interaction : MonoBehaviour
 				ScrapCount++;
 				ScrapMetal3ImageRenderer.enabled = false;
 				ScrapMetal3Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
 			}
 		}
 
@@ -356,8 +350,7 @@ public class Interaction : MonoBehaviour
 				ScrapCount++;
 				ScrapMetal4ImageRenderer.enabled = false;
 				ScrapMetal4Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
 			}
 		}
 
@@ -369,8 +362,8 @@ public class Interaction : MonoBehaviour
                 ScrapCount--;
                 Hull1RepairedImageRenderer.enabled = true;
                 Hull1Repaired = true;
-                GetComponent<AudioSource>().clip = Clip[1];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
+                
             }
         }
 
@@ -382,8 +375,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount--;
 				Hull2RepairedImageRenderer.enabled = true;
 				Hull2Repaired = true;
-                GetComponent<AudioSource>().clip = Clip[1];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
+                
 			}
 		}
 
@@ -395,8 +388,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount--;
 				Hull3RepairedImageRenderer.enabled = true;
 				Hull3Repaired = true;
-				GetComponent<AudioSource>().clip = Clip[1];
-				GetComponent<AudioSource>().Play();
+				Instantiate (music);
+				
 			}
 		}
 
@@ -408,8 +401,8 @@ public class Interaction : MonoBehaviour
 				ScrapCount--;
 				Hull4RepairedImageRenderer.enabled = true;
 				Hull4Repaired = true;
-                GetComponent<AudioSource>().clip = Clip[1];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
+                
 			}
 		}
 
@@ -419,8 +412,8 @@ public class Interaction : MonoBehaviour
             {
                 HasTorch = true;
                 TorchImageRenderer.enabled = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
+                
             }
         }
 
@@ -432,8 +425,8 @@ public class Interaction : MonoBehaviour
                 BatteryCount++;
                 Battery1ImageRenderer.enabled = false;
                 Battery1Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
+                
             }
         }
 
@@ -445,8 +438,8 @@ public class Interaction : MonoBehaviour
                 BatteryCount++;
                 Battery2ImageRenderer.enabled = false;
                 Battery2Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
+                
             }
         }
 
@@ -458,8 +451,8 @@ public class Interaction : MonoBehaviour
                 BatteryCount++;
                 Battery3ImageRenderer.enabled = false;
                 Battery3Collected = true;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
+                
             }
         }
 
@@ -470,8 +463,8 @@ public class Interaction : MonoBehaviour
             {
                 HasWrench = true;
                 WrenchImageRenderer.enabled = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
+                
             }
         }
 
@@ -482,8 +475,8 @@ public class Interaction : MonoBehaviour
             {
                 PasscodeBookCollected = true;
                 PasscodeBookImageRenderer.enabled = false;
-                GetComponent<AudioSource>().clip = Clip[0];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
+                
             }
         }
 
@@ -496,8 +489,8 @@ public class Interaction : MonoBehaviour
                 BatteryCount -= 3;
                 PowerGeneratorImageRenderer.enabled = true;
                 PowerGeneratorBrokenImageRenderer.enabled = false;
-                GetComponent<AudioSource>().clip = Clip[2];
-                GetComponent<AudioSource>().Play();
+                Instantiate (music);
+                
             }
         }
 
@@ -591,8 +584,8 @@ public class Interaction : MonoBehaviour
 			Piping1Collected = true;
 			PipingCount++;
 			Piping1ImageRenderer.enabled = false;
-			GetComponent<AudioSource>().clip = Clip[0];
-			GetComponent<AudioSource>().Play();
+			Instantiate (music);
+			
 		}
 
 		else if (other.CompareTag("Piping2") && Piping2Collected == false && keyPressed == true && PowerGenRepaired == true)
@@ -600,8 +593,8 @@ public class Interaction : MonoBehaviour
 			Piping2Collected = true;
 			PipingCount++;
 			Piping2ImageRenderer.enabled = false;
-			GetComponent<AudioSource>().clip = Clip[0];
-			GetComponent<AudioSource>().Play();
+			Instantiate (music);
+			
 		}
 
 		else if (other.CompareTag("Piping3") && Piping3Collected == false && keyPressed == true && PowerGenRepaired == true)
@@ -609,32 +602,32 @@ public class Interaction : MonoBehaviour
 			Piping3Collected = true;
 			PipingCount++;
 			Piping3ImageRenderer.enabled = false;
-			GetComponent<AudioSource>().clip = Clip[0];
-			GetComponent<AudioSource>().Play();
+			Instantiate (music);
+			
 		}
 
 		else if (other.CompareTag("CO2Converter") && CO2ConverterCollected == false && keyPressed == true && PowerGenRepaired == true)
 		{
 			CO2ConverterCollected = true;
 			CO2ConverterRenderer.enabled = false;
-			GetComponent<AudioSource>().clip = Clip[0];
-			GetComponent<AudioSource>().Play();
+			Instantiate (music);
+			
 		}
 
 		else if (other.CompareTag("NuclearPowerCell") && NuclearPowerCellCollected == false && keyPressed == true && PowerGenRepaired == true)
 		{
 			NuclearPowerCellCollected = true;
 			NuclearPowerCellRenderer.enabled = false;
-			GetComponent<AudioSource>().clip = Clip[0];
-			GetComponent<AudioSource>().Play();
+			Instantiate (music);
+			
 		}
 
 		else if (other.CompareTag("TorqueWrench") && HasTorqueWrench == false && keyPressed == true && PowerGenRepaired == true)
 		{
 			HasTorqueWrench = true;
 			TorqueWrenchImageRenderer.enabled = false;
-			GetComponent<AudioSource>().clip = Clip[0];
-			GetComponent<AudioSource>().Play();
+			Instantiate (music);
+			
 		}
 
 		else if (other.CompareTag("OxygenConverter") && OxygenGenPartsCollected == true && 
@@ -643,8 +636,8 @@ public class Interaction : MonoBehaviour
 			OxygenGenRepaired = true;
 			PipingCount = 0;
 			OxygenGeneratorRepairedImageRenderer.enabled = true;
-			GetComponent<AudioSource>().clip = Clip[2];
-			GetComponent<AudioSource>().Play();
+			Instantiate (music);
+			
 		}
     }
 
@@ -655,8 +648,8 @@ public class Interaction : MonoBehaviour
             GameOverText.text = "Game Over";
             DeathMessageText.text = "You fell into space, doomed to float through the void until you die.";
             oxygenController.enabled = false;
-            GetComponent<AudioSource>().clip = Clip[3];
-            GetComponent<AudioSource>().Play();
+			Instantiate (music);
+            
         }
     }
 }
