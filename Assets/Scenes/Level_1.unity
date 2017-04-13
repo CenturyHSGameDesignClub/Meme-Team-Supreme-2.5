@@ -5797,7 +5797,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 129588, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
       propertyPath: m_Name
-      value: BGMusic (1)
+      value: BGMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250106, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
@@ -6758,6 +6762,10 @@ Prefab:
     - target: {fileID: 8250106, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
       propertyPath: Loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129588, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
+      propertyPath: m_Name
+      value: Trigger Sound
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
