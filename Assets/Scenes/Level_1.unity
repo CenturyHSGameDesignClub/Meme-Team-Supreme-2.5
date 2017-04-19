@@ -5790,10 +5790,10 @@ Prefab:
     - target: {fileID: 8250106, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 62874b6e7216cad4385a9d0e2584aec8, type: 3}
+      objectReference: {fileID: 8300000, guid: f4f4fd877a1566946a0a2f41eb688194, type: 3}
     - target: {fileID: 8250106, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
       propertyPath: Loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 129588, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
       propertyPath: m_Name
@@ -5801,7 +5801,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8250106, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
       propertyPath: m_PlayOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
@@ -6758,14 +6758,18 @@ Prefab:
     - target: {fileID: 8250106, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 62874b6e7216cad4385a9d0e2584aec8, type: 3}
+      objectReference: {fileID: 8300000, guid: f4f4fd877a1566946a0a2f41eb688194, type: 3}
     - target: {fileID: 8250106, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
       propertyPath: Loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 129588, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
       propertyPath: m_Name
       value: Trigger Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250106, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de65b5464bba36242b0280f4749e9db8, type: 2}
@@ -9518,7 +9522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawning: 0
-  spawnInterval: 1
+  spawnInterval: 0
   interact: {fileID: 1129739779}
   Enemy: {fileID: 859122972}
 --- !u!1001 &2072937875
