@@ -5,7 +5,7 @@ Direct3D:
     Renderer: Intel(R) HD Graphics 4600 (ID=0x412)
     Vendor:   Intel
     VRAM:     1008 MB
-    Driver:   6.1.7600.16385
+    Driver:   10.18.14.4280
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\winikkc\Documents\Unity Projects\MemeTeamSupreme2.5\IntoTheVoid_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\winikkc\Documents\Unity Projects\MemeTeamSupreme2.5\IntoTheVoid_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -19,20 +19,20 @@ Platform assembly: C:\Users\winikkc\Documents\Unity Projects\MemeTeamSupreme2.5\
 Loading C:\Users\winikkc\Documents\Unity Projects\MemeTeamSupreme2.5\IntoTheVoid_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\winikkc\Documents\Unity Projects\MemeTeamSupreme2.5\IntoTheVoid_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\winikkc\Documents\Unity Projects\MemeTeamSupreme2.5\IntoTheVoid_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  1.307 seconds
+- Completed reload, in  0.089 seconds
 Platform assembly: C:\Users\winikkc\Documents\Unity Projects\MemeTeamSupreme2.5\IntoTheVoid_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\winikkc\Documents\Unity Projects\MemeTeamSupreme2.5\IntoTheVoid_Data\Managed\System.dll (this message is harmless)
-desktop: 1600x900 60Hz; virtual: 3520x1080 at 0,0
+desktop: 1600x900 60Hz; virtual: 3520x1080 at 0,-180
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 4.178183 ms
+UnloadTime: 2.735046 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 494c -> priority: 1 
+  Thread -> id: 25ec -> priority: 1 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.440369 ms
+UnloadTime: 4.121541 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1809.
-Total: 0.359845 ms (FindLiveObjects: 0.073088 ms CreateObjectMapping: 0.020527 ms MarkObjects: 0.258764 ms  DeleteObjects: 0.007153 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1776.
+Total: 0.445370 ms (FindLiveObjects: 0.080241 ms CreateObjectMapping: 0.022081 ms MarkObjects: 0.323142 ms  DeleteObjects: 0.015239 ms)
 
